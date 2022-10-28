@@ -1,22 +1,23 @@
-import React, {useState} from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
-import NavbarAdmin from '../../components/navbar/NavbarAdmin'
-import Sidebar from '../../components/sidebar/Sidebar'
+import React, { useState } from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import CardDashboard from "../../components/card/CardDashboard";
+import NavbarAdmin from "../../components/navbar/NavbarAdmin";
+import Sidebar from "../../components/sidebar/Sidebar";
 
 const Home = () => {
-  
-  const [animated, setAnimated] = useState(false)
+  const [animated, setAnimated] = useState(false);
 
   return (
-    <Container >
+    <Container>
       <NavbarAdmin animated={animated} />
-        <Row>
-            <Col>
-                <Sidebar animated={animated} setAnimated={setAnimated} />
-            </Col>
-        </Row>
+      <Row>
+        <Col>
+          <Sidebar animated={animated} setAnimated={setAnimated} />
+        </Col>
+        <CardDashboard />
+      </Row>
     </Container>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
