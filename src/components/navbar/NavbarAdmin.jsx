@@ -1,18 +1,18 @@
 import { Navbar, Form, Nav, InputGroup, Button } from "react-bootstrap";
-import logo from "../Image/logo.png";
-import line from "../Image/line.png"
+import logo from "../../Image/logo.png";
+import line from "../../Image/line.png"
 import { BiSearch } from "react-icons/bi";
 import { IoIosNotificationsOutline } from "react-icons/io";
 
 
-function NavbarAdmin() {
+function NavbarAdmin({animated}) {
   return (
     <Navbar
       collapseOnSelect
       expand="lg"
       className="mt-3 rounded-4 border bg-light"
       style={{
-        zIndex: "99",
+        zIndex: "-1",
         position: "fixed",
         right: "30px",
         left: "30px",
@@ -21,11 +21,11 @@ function NavbarAdmin() {
     >
       <>
         <Navbar.Brand href="#home" className="ms-5" style={{
-          borderRight: "3px solid #9D9C9C"
+          borderRight: "3px solid #9D9C9C",
+          marginRight: animated ? "2em" : "8em",
+          transition:"0.5s"
         }}>
-          <img src={logo} alt="" width={"150"} style={{
-            marginRight: "2.9em"
-          }} />
+          <h4>a</h4>
         </Navbar.Brand>
       
         <Navbar.Toggle

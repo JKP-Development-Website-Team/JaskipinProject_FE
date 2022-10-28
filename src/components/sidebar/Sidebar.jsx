@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { Col, Container, Dropdown, Row } from "react-bootstrap";
-import { categories } from "../components/utils/Constant";
+import { Col, Dropdown, Row } from "react-bootstrap";
+import { categories } from "../../components/utils/Constant";
 
-const Sidebar = () => {
+import LogoJaskipin from "../logo-jskpn/LogoJaskipin";
+
+const Sidebar = ({animated, setAnimated}) => {
   const [selectedCategory, setSelectedCategory] = useState('home-1')
 
-  console.log(selectedCategory)
+
   return (
     <div style={{
         position:"absolute",
@@ -15,16 +17,18 @@ const Sidebar = () => {
         <Col
           md={12}
           style={{
-            width: "300px",
+            width: animated ? "180px" : "300px",
             height: "100vh",
             background: "#0843AD",
-            padding: "120px 40px 0 0",
+            padding: "130px 40px 0 0",
             display: "flex",
             flexDirection: "column",
             alignItems: "end",
+            transition:"0.5s"
           }}
           className=""
         >
+          <LogoJaskipin animated={animated} setAnimated={setAnimated} />
           {categories.map((item, idx) => {
             return (
               <Dropdown
@@ -37,23 +41,23 @@ const Sidebar = () => {
                   id="dropdown-basic"
                   style={{
                     backgroundColor: item.name === selectedCategory ? '#072E73' : "#0843AD",
-                    width: "13em",
-                    border:"none"
+                    width: animated ? "5em" : "13em",
+                    border:"none",
+                    transition:"0.5s"
                   }}
                   className="mb-3 d-flex justify-content-between align-items-center"
                 >
                   <span
                     style={{
                       fontSize: "25px",
+                      transition:"0.5s",
                       marginTop: "-7px",
-                      "&hover": {
-                        background: "black",
-                      },
                     }}
                   >
                     {item.icon}
-                  </span>{" "}
-                  {item.name}
+                  </span>
+                  {animated ? "" : item.name }
+                  
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
