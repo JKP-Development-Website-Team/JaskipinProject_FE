@@ -4,12 +4,18 @@
 git pull origin main
 ```
 
-to make sure there is no updates in `Github` repository.
-
 2. After that, change your branch and name it like following
 ``git checkout -b (your_features)-(your_name)``
 
-3. And that push your updated code to branch development
+3. Commit your changes
 ```bash
-git push origin development
+git add .
+git commit -am "your message"
 ```
+
+4. After that push your updated code to your current branch like folowing
+```bash
+git push origin your-current-branch
+```
+
+5. Finally, open github 
