@@ -1,7 +1,7 @@
 ## Git Workflow
 1. Before writing any code please do like following
 ```bash
-git pull origin development
+git pull origin main
 ```
 
 to make sure there is no updates in `Github` repository.
