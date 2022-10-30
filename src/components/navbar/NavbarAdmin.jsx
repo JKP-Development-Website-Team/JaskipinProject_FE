@@ -12,7 +12,7 @@ function NavbarAdmin({animated}) {
       expand="lg"
       className="mt-3 rounded-4 border bg-light"
       style={{
-        zIndex: "-1",
+        // zIndex: "-1",
         position: "fixed",
         right: "30px",
         left: "30px",
