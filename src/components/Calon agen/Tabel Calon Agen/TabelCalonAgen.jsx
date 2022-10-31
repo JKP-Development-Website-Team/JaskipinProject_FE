@@ -1,42 +1,56 @@
-import { Container } from 'react-bootstrap';
-import Table from 'react-bootstrap/Table';
+import { Container } from "react-bootstrap";
+import Table from "react-bootstrap/Table";
 
 function TabelCalonAgen() {
   return (
-    <Container>
-      <Table striped bordered hover size="sm" style={{ marginTop: "10vh", borderRadius: "100px" }} className="rounded">
-        <thead>
-          <tr style={{ backgroundColor: "#0843AD" }} >
-            <th>Status</th>
-            <th>Nama</th>
-            <th>Email</th>
-            <th>Alamat</th>
-            <th>No. Hp</th>
-            <th>Kota</th>
-            <th>Tanggal</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td colSpan={2}>Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </Table>
-    </Container>
+    <table className="mt-3">
+      <thead style={{}}>
+        <tr
+          style={{
+            backgroundColor: "#0843AD",
+            color: "white",
+            borderRadius: "10px",
+          }}
+        >
+          <th>Status</th>
+          <th>Nama</th>
+          <th>Email</th>
+          <th>Alamat</th>
+          <th>No. Hp</th>
+          <th>Kota</th>
+          <th>Tanggal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>Johndoe@gmail.com</td>
+          <td>Jl. Siliwangi</td>
+          <td>0896 xxxx xxxx</td>
+          <td>2 Januari 2022</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>Johndoe@gmail.com</td>
+          <td>Jl. Siliwangi</td>
+          <td>0896 xxxx xxxx</td>
+          <td>2 Januari 2022</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>Johndoe@gmail.com</td>
+          <td>Jl. Siliwangi</td>
+          <td>0896 xxxx xxxx</td>
+          <td>2 Januari 2022</td>
+          <td>@mdo</td>
+        </tr>
+      </tbody>
+    </table>
   );
 }
 
