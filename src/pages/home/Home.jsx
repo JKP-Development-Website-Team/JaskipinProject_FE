@@ -13,6 +13,7 @@ const Home = () => {
         <Row>
             <Col>
                 <Sidebar animated={animated} setAnimated={setAnimated} />
+                
             </Col>
         </Row>
     </Container>

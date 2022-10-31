@@ -1,0 +1,18 @@
+table {
+    border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
+    width: 100%;
+    box-shadow: -1px 5px 10px rgba(0,0,0,0.181);
+  }
+  
+th, td {
+    padding: 1em;
+    border-bottom: 2px solid white; 
+  }
+th {
+    background:#0843AD;
+  }  
+ tbody tr:nth-of-type(odd) {
+    background-color: #f3f3f3;
+}
