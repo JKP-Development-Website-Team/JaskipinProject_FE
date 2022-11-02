@@ -5,6 +5,7 @@ import Sidebar from "../../components/sidebar/Sidebar";
 
 import {AiOutlineRight} from 'react-icons/ai'
 import {BsChevronExpand} from 'react-icons/bs'
+import CompHead from '../../components/omzetLuar/CompHead';
 
 const OmzetLuarNegri = () => {
 
@@ -14,7 +15,7 @@ const OmzetLuarNegri = () => {
     <div
     style={{
       backgroundColor: "#D9D9D9",
-      minHeight: "100vh",
+      minHeight: "200vh",
     }}
   >
     <NavbarAdmin animated={animated} />
@@ -50,6 +51,9 @@ const OmzetLuarNegri = () => {
               }} >
                 <div
                     className=" me-4"
+                    style={{
+                      cursor: "pointer"
+                    }}
                 >
                     <h4 style={{
                         textAlign: "center",
@@ -65,6 +69,9 @@ const OmzetLuarNegri = () => {
 
                 <div
                     className="me-4"
+                    style={{
+                      cursor: "pointer"
+                    }}
                 >
                     <h4 style={{
                         textAlign: "center",
@@ -79,6 +86,9 @@ const OmzetLuarNegri = () => {
                 
                 <div
                     className="me-4"
+                    style={{
+                      cursor: "pointer"
+                    }}
                 >
                     <h4 style={{
                         
@@ -98,7 +108,7 @@ const OmzetLuarNegri = () => {
         </div>
 
           {/* Components Here */}
-
+          <CompHead />
 
           {/* Components Here */}
 
