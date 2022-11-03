@@ -54,21 +54,38 @@ const Sidebar = ({animated, setAnimated}) => {
                       marginTop: "-7px",
                     }}
                   >
-                    {item.icon}
+                    <img src={item.icon} alt="" />
                   </span>
                   {animated ? "" : item.name }
                   
                 </Dropdown.Toggle>
 
-                <Dropdown.Menu>
-                  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">
-                    Another action
-                  </Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">
-                    Something else
-                  </Dropdown.Item>
-                </Dropdown.Menu>
+                {/* <Dropdown.Menu>
+                  {item?.children?.chilOne ? (
+                    <Dropdown.Item href="#/action-1">{item?.children?.chilOne}</Dropdown.Item>
+                  ) : ""}    
+                  {item?.children?.chilTwo ? (
+                    <Dropdown.Item href="#/action-1">{item?.children?.chilTwo}</Dropdown.Item>
+                  ) : ""}    
+                  {item?.children?.chilThree ? (
+                    <Dropdown.Item href="#/action-1">{item?.children?.chilThree}</Dropdown.Item>
+                  ) : ""}    
+                  {item?.children?.chilFour ? (
+                    <Dropdown.Item href="#/action-1">{item?.children?.chilFour}</Dropdown.Item>
+                  ) : ""}    
+                  {item?.children?.chilFive ? (
+                    <Dropdown.Item href="#/action-1">{item?.children?.chilFive}</Dropdown.Item>
+                  ) : ""}    
+                  {item?.children?.chilSix ? (
+                    <Dropdown.Item href="#/action-1">{item?.children?.chilSix}</Dropdown.Item>
+                  ) : ""}    
+                </Dropdown.Menu> */}
+
+                <div>
+                  <ul>
+                    <li>li</li>
+                  </ul>
+                </div>
               </Dropdown>
             );
           })}

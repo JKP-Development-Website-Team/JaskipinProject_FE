@@ -30,6 +30,7 @@ const CalonAgen = () => {
               left: animated ? "200px" : "300px",
               top:"125px"
             }}>
+              {/* Batas Animasi*/}
             <div
                 style={{
                   marginTop: "",
@@ -53,6 +54,7 @@ const CalonAgen = () => {
                 </div>
               </div>
               <TabelCalonAgen />
+              {/* Batas Animasi */}
             </div>
           </Row>
         </Container>

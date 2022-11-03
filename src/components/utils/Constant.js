@@ -1,13 +1,37 @@
-import {HiHome} from 'react-icons/hi'
+import dashboardLogo from '../../Image/dashboard-logo.png'
+import calonAgen from '../../Image/calon-agen.png'
+import domestik from '../../Image/domestik.png'
+import laporan from '../../Image/laporan.png'
+import laporanAgen from '../../Image/laporan-agen.png'
+import luarNegeri from '../../Image/luarnegeri.png'
+import pengaturan from '../../Image/pengaturan.png'
 
 export const categories = [
-    {name:"Home 1", icon: <HiHome />,},
-    {name:"Home 2", icon: <HiHome />,},
-    {name:"Home 3", icon: <HiHome />,},
-    {name:"Home 4", icon: <HiHome />,},
-    {name:"Home 5", icon: <HiHome />,},
-    {name:"Home 6", icon: <HiHome />,},
-    {name:"Home 7", icon: <HiHome />,},
-    {name:"Home 8", icon: <HiHome />,},
+    {name:"Dashboard", icon: dashboardLogo, children: {
+        chilOne: "Omzet Luar Negeri",
+        chilTwo:"Omzet Domestik",
+        chilThree:"Pengguna Baru",
+    }},
+    {name:"Calon Agen", icon: calonAgen, children: {
+        chilOne:"Agen",
+        chilTwo:"Member"
+    }},
+    {name:"Luar Negeri", icon: domestik, children: {
+        chilOne:"Transaksi",
+        chilTwo:"Tarif",
+        chilThree:"Booking",
+        chilFour:"Request AWB",
+        chilFive:"Scan Barcode",
+        chilSix:"Tracking"
+    }},
+    {name:"Domestik", icon: laporan, children:{
+        chilOne:"Transaksi",
+        chilTwo:"Booking"
+    }},
+    {name:"Keuangan", icon: laporanAgen,},
+    {name:"Laporan", icon: luarNegeri,},
+    {name:"Pengaturan", icon: pengaturan,},
+    {name:"laporan Agen", icon: laporanAgen,},
+    
 ]
 
