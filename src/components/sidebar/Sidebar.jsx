@@ -18,7 +18,7 @@ const Sidebar = ({animated, setAnimated}) => {
           md={12}
           style={{
             width: animated ? "180px" : "300px",
-            height: "100vh",
+            minHeight: "200vh",
             background: "#0843AD",
             padding: "130px 40px 0 0",
             display: "flex",
