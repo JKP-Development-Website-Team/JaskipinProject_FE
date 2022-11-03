@@ -1,5 +1,4 @@
-import { Navbar, Form, Nav, InputGroup, Button } from "react-bootstrap";
-import logo from "../../Image/logo.png";
+import { Navbar, Form, InputGroup } from "react-bootstrap";
 import line from "../../Image/line.png"
 import { BiSearch } from "react-icons/bi";
 import { IoIosNotificationsOutline } from "react-icons/io";
@@ -32,15 +31,19 @@ function NavbarAdmin({animated}) {
           aria-controls="responsive-navbar-nav"
           className="me-4"
         />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Collapse id="responsive-navbar-nav" className="ms-4">
           <InputGroup className="w-50 mx-5">
-            <InputGroup.Text id="basic-addon1">
+            <InputGroup.Text id="basic-addon1" style={{backgroundColor:'#EFEFEF', borderRadius:'20px 0px 0px 20px'}} className="">
               <BiSearch />
             </InputGroup.Text>
             <Form.Control
               type="text"
               name="Search"
               placeholder="Search"
+              style={{borderLeft:'none', borderRadius:'0px 20px 20px 0px', backgroundColor:'#EFEFEF'}}
+
+             
+
             // onChange={handleChange}
             />
           </InputGroup>

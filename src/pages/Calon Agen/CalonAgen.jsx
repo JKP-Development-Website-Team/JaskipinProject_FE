@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Col, Container, Row, InputGroup, Form } from "react-bootstrap";
+import { Container, Row, InputGroup, Form } from "react-bootstrap";
 import TabelCalonAgen from "../../components/Calon agen/Tabel Calon Agen/TabelCalonAgen";
 import NavbarAdmin from "../../components/navbar/NavbarAdmin";
 import Sidebar from "../../components/sidebar/Sidebar";
@@ -19,16 +19,16 @@ const CalonAgen = () => {
         <NavbarAdmin animated={animated} />
         <Container>
           <Row className=''>
-            <div style={{background:"salmon"}}>
-              <Sidebar animated={animated} setAnimated={setAnimated} />             
+            <div style={{ background: "salmon" }}>
+              <Sidebar animated={animated} setAnimated={setAnimated} />
             </div>
             <div className="ps-3 " style={{
-              background:"",
+              background: "",
               width: animated ? "85%" : "77%",
-              position:"absolute",
-              transition:"0.5s",
+              position: "absolute",
+              transition: "0.5s",
               left: animated ? "200px" : "300px",
-              top:"125px"
+              top: "125px"
             }}>
               {/* Batas Animasi*/}
             <div
@@ -38,17 +38,22 @@ const CalonAgen = () => {
                 className="d-flex"
               >
                 <div className="p-2">
-                  <h4>Member</h4>
+                  <h4>Agen</h4>
                 </div>
                 <div className="p-2">
-                  <InputGroup className="w-100 mx-5">
-                    <InputGroup.Text id="basic-addon1">
+                  <InputGroup className="w-75 mx-5">
+                    <InputGroup.Text id="basic-addon1" style={{ backgroundColor: '#EFEFEF', borderRadius: '20px 0px 0px 20px' }} className="">
                       <BiSearch />
                     </InputGroup.Text>
                     <Form.Control
                       type="text"
                       name="Search"
                       placeholder="Search"
+                      style={{ borderLeft: 'none', borderRadius: '0px 20px 20px 0px', backgroundColor: '#EFEFEF' }}
+
+
+
+                    // onChange={handleChange}
                     />
                   </InputGroup>
                 </div>
@@ -59,7 +64,7 @@ const CalonAgen = () => {
           </Row>
         </Container>
       </div>
-    </> 
+    </>
   );
 };
 
