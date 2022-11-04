@@ -4,6 +4,7 @@ import TabelCalonAgen from "../../components/Calon agen/Tabel Calon Agen/TabelCa
 import NavbarAdmin from "../../components/navbar/NavbarAdmin";
 import Sidebar from "../../components/sidebar/Sidebar";
 import { BiSearch } from "react-icons/bi";
+import SidebarDua from "../../components/sidebar/SidebarDua";
 
 const CalonAgen = () => {
   const [animated, setAnimated] = useState(false);
@@ -20,7 +21,8 @@ const CalonAgen = () => {
         <Container>
           <Row className=''>
             <div style={{ background: "salmon" }}>
-              <Sidebar animated={animated} setAnimated={setAnimated} />
+              {/* <Sidebar animated={animated} setAnimated={setAnimated} /> */}
+              <SidebarDua />
             </div>
             <div className="ps-3 " style={{
               background: "",

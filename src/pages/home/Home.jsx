@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import NavbarAdmin from '../../components/navbar/NavbarAdmin'
 import Sidebar from '../../components/sidebar/Sidebar'
+import SidebarDua from '../../components/sidebar/SidebarDua'
 
 const Home = () => {
   
@@ -12,8 +13,8 @@ const Home = () => {
       <NavbarAdmin animated={animated} />
         <Row>
             <Col>
-                <Sidebar animated={animated} setAnimated={setAnimated} />
-                
+                {/* <Sidebar animated={animated} setAnimated={setAnimated} /> */}
+                <SidebarDua />
             </Col>
         </Row>
     </Container>

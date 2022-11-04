@@ -5,7 +5,7 @@ import { categories } from "../../components/utils/Constant";
 import LogoJaskipin from "../logo-jskpn/LogoJaskipin";
 
 const Sidebar = ({animated, setAnimated}) => {
-  const [selectedCategory, setSelectedCategory] = useState('home-1')
+  const [selectedCategory, setSelectedCategory] = useState('')
 
 
   return (
@@ -57,6 +57,12 @@ const Sidebar = ({animated, setAnimated}) => {
                     <img src={item.icon} alt="" />
                   </span>
                   {animated ? "" : item.name }
+
+                  <div>
+                  <ul>
+                    <li>li</li>
+                  </ul>
+                </div>
                   
                 </Dropdown.Toggle>
 
@@ -81,11 +87,7 @@ const Sidebar = ({animated, setAnimated}) => {
                   ) : ""}    
                 </Dropdown.Menu> */}
 
-                <div>
-                  <ul>
-                    <li>li</li>
-                  </ul>
-                </div>
+
               </Dropdown>
             );
           })}
