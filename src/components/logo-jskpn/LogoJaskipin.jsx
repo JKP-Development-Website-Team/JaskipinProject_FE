@@ -26,8 +26,8 @@ const LogoJaskipin = ({animated, setAnimated}) => {
           <img
             src={LogoNotFull}
             alt="Jaskipin"
-            width={55}
-            height={60}
+            width={64}
+            height={55}
             onClick={() => setAnimated(false)}
             style={{
                 transition:"0.5s"
@@ -37,8 +37,8 @@ const LogoJaskipin = ({animated, setAnimated}) => {
           <img
             src={Logo}
             alt="Jaskipin"
-            width={150}
-            height={60}
+            width={175}
+            height={51}
             onClick={() => setAnimated(true)}
             style={{
                 transition:"0.5s"

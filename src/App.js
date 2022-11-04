@@ -10,7 +10,6 @@ import OmzetLuarNegri from './pages/omzetLuarNegri/OmzetLuarNegri';
 
 function App() {
 
-
   return (
 
     
