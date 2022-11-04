@@ -1,6 +1,3 @@
-import { Container } from "react-bootstrap";
-import Table from "react-bootstrap/Table";
-
 function TabelCalonAgen() {
   return (
     <table className="mt-3">

@@ -7,11 +7,12 @@ table {
   }
   
 th, td {
-    padding: 1em;
+    padding: 1em 1.5em;
     border-bottom: 2px solid white; 
   }
 th {
     background:#0843AD;
+    font-weight: normal;
   }  
  tbody tr:nth-of-type(odd) {
     background-color: #f3f3f3;
