@@ -1,3 +1,6 @@
+import {BsThreeDotsVertical} from 'react-icons/bs'
+
+
 function TabelCalonAgen() {
   return (
     <table className="mt-3">
@@ -20,31 +23,23 @@ function TabelCalonAgen() {
       </thead>
       <tbody>
         <tr>
-          <td>1</td>
-          <td>Mark</td>
+          <td className='d-flex justify-content-between align-items-center' style={{
+            color:"#0843AD"
+          }}>
+            Aktif
+           <span><BsThreeDotsVertical style={{
+            cursor:'pointer',
+            color:"#828181",
+            fontSize:"1.5em",
+            marginLeft:"10px"
+           }}/></span> 
+          </td>
+          <td>John Doe</td>
           <td>Johndoe@gmail.com</td>
           <td>Jl. Siliwangi</td>
           <td>0896 xxxx xxxx</td>
+          <td>Cirebon</td>
           <td>2 Januari 2022</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Johndoe@gmail.com</td>
-          <td>Jl. Siliwangi</td>
-          <td>0896 xxxx xxxx</td>
-          <td>2 Januari 2022</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Johndoe@gmail.com</td>
-          <td>Jl. Siliwangi</td>
-          <td>0896 xxxx xxxx</td>
-          <td>2 Januari 2022</td>
-          <td>@mdo</td>
         </tr>
       </tbody>
     </table>

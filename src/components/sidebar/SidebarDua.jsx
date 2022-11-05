@@ -3,24 +3,16 @@ import LogoJaskipin from "../logo-jskpn/LogoJaskipin";
 import { categories } from "../../components/utils/Constant";
 import {SlArrowRight, SlArrowDown} from 'react-icons/sl'
 
-const SidebarDua = () => {
+const SidebarDua = ({animated, setAnimated}) => {
 
   const [selectedCategory, setSelectedCategory] = useState('')
   const [showContent, setShowContent] = useState('')
 
-//   const handleShow = (name) => {
-//     setShowContent(name)
-
-//     if(showContent !== '') {
-//         setShowContent('')
-//     }
-//   }
-
-// Terahir pengerjaan lanjutan item content
-
   return (
-    <aside id="sidebar" className="sidebar">
-      <LogoJaskipin />
+    <aside id="sidebar" className="sidebar" style={{
+      width: animated ? "196px" : "292px"
+    }}>
+      <LogoJaskipin animated={animated} setAnimated={setAnimated} />
       <ul className="sidebar-nav" id="sidebar-nav">
         {categories.map((item, idx) => {
             return (
@@ -35,19 +27,24 @@ const SidebarDua = () => {
                   data-bs-target="#components-nav"
                   data-bs-toggle="collapse"
                   href="#"
-                //   onClick={() => handleShow(item.name)}
                   onClick={() => setShowContent(item.name)}
                   style={{
-                        backgroundColor: item.name === selectedCategory ? '#072E73' : "#0843AD",
+                        backgroundColor: showContent === item.name ? '#072E73' : item.name === selectedCategory ? '#072E73' : "#0843AD",
                         color:"white",
-                        fontWeight:"normal"
+                        fontWeight:"normal",
+                        borderRadius:"10px 10px 0 0"
                     }}
                    >
                     <div>
                         <img className="me-3" src={item.icon} alt="" />
-                        <span >{item.name}</span>
+                        {animated ? "" : (<span >{item.name}</span>) }
+                        
                     </div>
-                  <SlArrowRight />
+                    {showContent === item.name ? (
+                      <SlArrowDown />
+                      ): (
+                      <SlArrowRight />
+                    )}
                 </a>
                 <ul
                   className="nav-content collapse"
@@ -55,18 +52,69 @@ const SidebarDua = () => {
                   style={{
                     display:showContent === item.name ? "block" : "none",
                     background:'#072E73',
-                    borderTopLeftRadius:"0",
-                    borderTopRightRadius:"0"
+                    borderRadius:"0 0 10px 10px",
                   }}
                 >
+                  {item?.children?.chilOne ? (
                   <li>
                     <a href="#" style={{
-                        color:"white"
+                        color:"white",
+                        textDecoration:"none"
                     }}>
-                      <i className="bi bi-circle" />
-                      <span>Alerts</span>
+                      <span>{item?.children?.chilOne}</span>
                     </a>
                   </li>
+                  ): ""}
+                  {item?.children?.chilTwo ? (
+                  <li>
+                    <a href="#" style={{
+                        color:"white",
+                        textDecoration:"none"
+                    }}>
+                      <span>{item?.children?.chilTwo}</span>
+                    </a>
+                  </li>
+                  ): ""}
+                  {item?.children?.chilThree ? (
+                  <li>
+                    <a href="#" style={{
+                        color:"white",
+                        textDecoration:"none"
+                    }}>
+                      <span>{item?.children?.chilThree}</span>
+                    </a>
+                  </li>
+                  ): ""}
+                  {item?.children?.chilFour ? (
+                  <li>
+                    <a href="#" style={{
+                        color:"white",
+                        textDecoration:"none"
+                    }}>
+                      <span>{item?.children?.chilFour}</span>
+                    </a>
+                  </li>
+                  ): ""}
+                  {item?.children?.chilFive ? (
+                  <li>
+                    <a href="#" style={{
+                        color:"white",
+                        textDecoration:"none"
+                    }}>
+                      <span>{item?.children?.chilFive}</span>
+                    </a>
+                  </li>
+                  ): ""}
+                  {item?.children?.chilSix ? (
+                  <li>
+                    <a href="#" style={{
+                        color:"white",
+                        textDecoration:"none"
+                    }}>
+                      <span>{item?.children?.chilSix}</span>
+                    </a>
+                  </li>
+                  ): ""}
                 </ul>
               </li>
             )

@@ -3,10 +3,10 @@ import { Container, Row, InputGroup, Form, Button } from "react-bootstrap";
 import NavbarAdmin from "../../../components/navbar/NavbarAdmin";
 import { BiSearch } from "react-icons/bi";
 import {AiOutlinePlus} from "react-icons/ai"
-import TabelCalonAgen from "../../../components/Calon agen/Tabel Calon Agen/TabelCalonAgen";
+import TabelCalonAgen from "../../../components/tabel/TabelCalonAgen";
 import SidebarDua from "../../../components/sidebar/SidebarDua";
 import Union from '../../../Image/Union.png'
-import TabelTarif from '../../../components/tarif/TabelTarif';
+import TabelTarif from '../../../components/tabel/TabelTarif';
 
 const Tarif = () => {
   const [animated, setAnimated] = useState(false);
