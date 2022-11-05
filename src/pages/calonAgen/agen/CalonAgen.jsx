@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Container, Row, InputGroup, Form } from "react-bootstrap";
-import TabelCalonAgen from "../../components/Calon agen/Tabel Calon Agen/TabelCalonAgen";
-import NavbarAdmin from "../../components/navbar/NavbarAdmin";
-import Sidebar from "../../components/sidebar/Sidebar";
+import TabelCalonAgen from "../../../components/Calon agen/Tabel Calon Agen/TabelCalonAgen";
+import NavbarAdmin from "../../../components/navbar/NavbarAdmin";
+import Sidebar from "../../../components/sidebar/Sidebar";
 import { BiSearch } from "react-icons/bi";
-import SidebarDua from "../../components/sidebar/SidebarDua";
+import SidebarDua from "../../../components/sidebar/SidebarDua";
 
 const CalonAgen = () => {
   const [animated, setAnimated] = useState(false);

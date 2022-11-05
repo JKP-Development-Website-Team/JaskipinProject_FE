@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
 import { Container, Row, Button } from "react-bootstrap";
-import NavbarAdmin from "../../components/navbar/NavbarAdmin";
-import Sidebar from "../../components/sidebar/Sidebar";
+import NavbarAdmin from "../../../components/navbar/NavbarAdmin";
+import Sidebar from "../../../components/sidebar/Sidebar";
 
 import {AiOutlineRight} from 'react-icons/ai'
 import {BsChevronExpand} from 'react-icons/bs'
-import CompHead from '../../components/omzetLuar/CompHead';
+import CompHead from '../../../components/omzetLuar/CompHead';
 
 const OmzetLuarNegri = () => {
 
