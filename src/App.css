@@ -1,3 +1,7 @@
+* {
+  font-family: Raleway, sans-serif;
+}
+
 table {
     border-collapse: collapse;
     border-radius: 1em;
@@ -9,6 +13,8 @@ table {
 th, td {
     padding: 1em 1.5em;
     border-bottom: 2px solid white; 
+    font-size: 16px;
+    font-weight: normal;
   }
 th {
     background:#0843AD;
@@ -86,14 +92,12 @@ box-shadow:
   top: 0;
   left: 0;
   bottom: 0;
-  width: 300px;
   /* z-index: 996; */
   transition: all 0.5s;
-  padding: 100px 20px 20px 20px;
+  padding: 125px 20px 20px 20px;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #aab7cf transparent;
-  box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
   background-color: #0843AD;
 }
 
@@ -152,7 +156,7 @@ box-shadow:
 }
 
 .sidebar-nav .nav-item {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 .sidebar-nav .nav-heading {
@@ -172,7 +176,6 @@ box-shadow:
   transition: 0.3;
   background: #f6f9ff;
   padding: 10px 15px;
-  border-radius: 4px;
 }
 
 .sidebar-nav .nav-link i {
@@ -209,7 +212,7 @@ box-shadow:
 }
 
 .sidebar-nav .nav-content {
-  padding: 5px 0 0 0;
+  padding: 10px 0px 0 15px;
   margin: 0;
   list-style: none;
 }
@@ -218,7 +221,6 @@ box-shadow:
   display: flex;
   align-items: center;
   font-size: 14px;
-  font-weight: 600;
   color: #012970;
   transition: 0.3;
   padding: 10px 0 10px 40px;

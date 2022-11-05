@@ -8,12 +8,12 @@ const LogoJaskipin = ({animated, setAnimated}) => {
     <div
       style={{
         background: "white",
-        height: "75px",
+        height: "73px",
         width: "93%",
         borderTopLeftRadius: "10px",
         borderBottomLeftRadius: "10px",
         position: "absolute",
-        top: "15px",
+        top: "16px",
         right: "-14px",
         display: "flex",
         justifyContent: "space-between",
@@ -30,7 +30,7 @@ const LogoJaskipin = ({animated, setAnimated}) => {
             height={55}
             onClick={() => setAnimated(false)}
             style={{
-                transition:"0.5s"
+                transition:"0.5s",
               }}
           />
       ) : (
@@ -41,7 +41,7 @@ const LogoJaskipin = ({animated, setAnimated}) => {
             height={51}
             onClick={() => setAnimated(true)}
             style={{
-                transition:"0.5s"
+                transition:"0.5s",
               }}
           />
       )}
