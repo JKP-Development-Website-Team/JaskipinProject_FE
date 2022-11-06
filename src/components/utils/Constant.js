@@ -7,14 +7,20 @@ import luarNegeri from '../../Image/luarnegeri.png'
 import pengaturan from '../../Image/pengaturan.png'
 
 export const categories = [
-    {name:"Dashboard", icon: dashboardLogo, children: {
+    {name:"Dashboard", icon: dashboardLogo,children: {
         chilOne: "Omzet Luar Negeri",
         chilTwo:"Omzet Domestik",
         chilThree:"Pengguna Baru",
     }},
     {name:"Calon Agen", icon: calonAgen, children: {
-        chilOne:"Agen",
-        chilTwo:"Member"
+        chilOne: {
+            nameChil:"Agen",
+            link:"/agen"
+        },
+        chilTwo: {
+            nameChil:"Member",
+            link:"/member"
+        }
     }},
     {name:"Luar Negeri", icon: domestik, children: {
         chilOne:"Transaksi",
@@ -35,3 +41,18 @@ export const categories = [
     
 ]
 
+
+export const months = [
+    "Januari",
+    "Febuari",
+    "Maret",
+    "April",
+    "Mei",
+    "Juni",
+    "Juli",
+    "Agustus",
+    "September",
+    "Oktober",
+    "November",
+    "Desember"
+]

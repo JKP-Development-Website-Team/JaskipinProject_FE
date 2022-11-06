@@ -5,6 +5,7 @@ import { BiSearch } from 'react-icons/bi'
 import BookingTable from '../../../components/bookingTable/BookingTable'
 import NavbarAdmin from '../../../components/navbar/NavbarAdmin'
 import SidebarDua from '../../../components/sidebar/SidebarDua'
+import { months } from '../../../components/utils/Constant'
 
 const BookingPage = () => {
     const [animated, setAnimated] = useState('')
@@ -64,9 +65,11 @@ const BookingPage = () => {
                         color:'#c3cbc8',
 
                     }}>
-                        <Dropdown.Item as="button">Action</Dropdown.Item>
-                        <Dropdown.Item as="button">Another action</Dropdown.Item>
-                        <Dropdown.Item as="button">Something else</Dropdown.Item>
+                      {months.map((item, idx) => {
+                        return (
+                          <Dropdown.Item key={idx} as="button">{item}</Dropdown.Item>
+                        )
+                      })}
                     </DropdownButton>
                 </div>
               </div>

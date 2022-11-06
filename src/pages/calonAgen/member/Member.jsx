@@ -20,12 +20,12 @@ const Member = () => {
           minHeight: "100vh",
         }}
       >
-        <NavbarAdmin animated={animated} />
+        {/* <NavbarAdmin animated={animated} /> */}
         <Container>
           <Row className=''>
             <div style={{ background: "salmon" }}>
               {/* <Sidebar animated={animated} setAnimated={setAnimated} /> */}
-              <SidebarDua animated={animated} setAnimated={setAnimated} />
+              {/* <SidebarDua animated={animated} setAnimated={setAnimated} /> */}
             </div>
             <div className="ps-3 " style={{
               background: "",

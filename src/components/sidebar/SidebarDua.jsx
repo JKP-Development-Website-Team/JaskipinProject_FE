@@ -2,11 +2,15 @@ import React, {useState} from "react";
 import LogoJaskipin from "../logo-jskpn/LogoJaskipin";
 import { categories } from "../../components/utils/Constant";
 import {SlArrowRight, SlArrowDown} from 'react-icons/sl'
+import { Link, useNavigate } from "react-router-dom";
 
 const SidebarDua = ({animated, setAnimated}) => {
 
   const [selectedCategory, setSelectedCategory] = useState('')
   const [showContent, setShowContent] = useState('')
+  const navigate = useNavigate()
+
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <aside id="sidebar" className="sidebar" style={{
@@ -22,12 +26,14 @@ const SidebarDua = ({animated, setAnimated}) => {
                     onMouseEnter={() => setSelectedCategory(item.name)}
                     onMouseLeave={() => setSelectedCategory('')}
                 >
-                <a
+                <Link
                   className="nav-link collapsed d-flex justify-content-between"
                   data-bs-target="#components-nav"
                   data-bs-toggle="collapse"
-                  href="#"
-                  onClick={() => setShowContent(item.name)}
+                  to={item.chilTwo}
+                  onClick={() => {
+                    setShowContent(item.name)
+                  }}
                   style={{
                         backgroundColor: showContent === item.name ? '#072E73' : item.name === selectedCategory ? '#072E73' : "#0843AD",
                         color:"white",
@@ -45,7 +51,7 @@ const SidebarDua = ({animated, setAnimated}) => {
                       ): (
                       <SlArrowRight />
                     )}
-                </a>
+                </Link>
                 <ul
                   className="nav-content collapse"
                   data-bs-parent="#sidebar-nav"
@@ -65,14 +71,14 @@ const SidebarDua = ({animated, setAnimated}) => {
                     </a>
                   </li>
                   ): ""}
-                  {item?.children?.chilTwo ? (
+                  {item?.children?.chilTwo?.nameChil ? (
                   <li>
-                    <a href="#" style={{
+                    <Link to={item?.children?.chilTwo?.link} style={{
                         color:"white",
                         textDecoration:"none"
                     }}>
-                      <span>{item?.children?.chilTwo}</span>
-                    </a>
+                      <span>{item?.children?.chilTwo?.nameChil}</span>
+                    </Link>
                   </li>
                   ): ""}
                   {item?.children?.chilThree ? (
