@@ -1,9 +1,8 @@
 import React from "react";
 import Logo from "../../Image/logo.png";
-import LogoNotFull from '../../Image/logo-not-full.png'
+import LogoNotFull from "../../Image/logo-not-full.png";
 
-const LogoJaskipin = ({animated, setAnimated}) => {
-
+const LogoJaskipin = ({ animated, setAnimated }) => {
   return (
     <div
       style={{
@@ -18,11 +17,11 @@ const LogoJaskipin = ({animated, setAnimated}) => {
         display: "flex",
         justifyContent: "space-between",
         alignContent: "center",
-        paddingLeft:"30px"
+        paddingLeft: "30px",
       }}
     >
-      <div className="d-flex justify-content-center align-items-center" >
-      {animated ? (
+      <div className="d-flex justify-content-center align-items-center">
+        {animated ? (
           <img
             src={LogoNotFull}
             alt="Jaskipin"
@@ -30,10 +29,10 @@ const LogoJaskipin = ({animated, setAnimated}) => {
             height={55}
             onClick={() => setAnimated(false)}
             style={{
-                transition:"0.5s",
-              }}
+              transition: "0.5s",
+            }}
           />
-      ) : (
+        ) : (
           <img
             src={Logo}
             alt="Jaskipin"
@@ -41,10 +40,10 @@ const LogoJaskipin = ({animated, setAnimated}) => {
             height={51}
             onClick={() => setAnimated(true)}
             style={{
-                transition:"0.5s",
-              }}
+              transition: "0.5s",
+            }}
           />
-      )}
+        )}
       </div>
       <span
         style={{
@@ -54,7 +53,27 @@ const LogoJaskipin = ({animated, setAnimated}) => {
           background: "#9D9C9C",
         }}
       ></span>
+
+      {/* garis pinggir */}
+      {animated ? (
+        <div
+          class="vl"
+          style={{
+            borderRight: "10.3px solid grey",
+            marginRight: "-4.3rem",
+          }}
+        ></div>
+      ) : (
+        <div
+          class="vl"
+          style={{
+            borderRight: "10.3px solid grey",
+            marginRight: "-3rem",
+          }}
+        ></div>
+      )}
     </div>
+    // garis pinggir
   );
 };
 
