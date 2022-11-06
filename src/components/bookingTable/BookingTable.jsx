@@ -83,16 +83,24 @@ const BookingTable = () => {
                         <Button style={{
                             background:"#9D9C9C",
                             border:"none",
-                            padding:"5px 1em"
+                            padding:"5px 1em 5px 8px",
+                            display:"flex",
+                            flexWrap:"nowrap",
                         }}>
-                            <span><IoEllipse /></span> Detail
+                            <span style={{
+                                paddingRight:"5px",
+                            }}><IoEllipse /></span> Detail
                         </Button>
                         <Button style={{
                             background:"#9D9C9C",
                             border:"none",
-                            padding:"5px 1em"
+                            padding:"5px 1em 5px 8px",
+                            display:"flex",
+                            flexWrap:"nowrap",
                         }}>
-                            <span><IoEllipse /></span> Pickup
+                            <span style={{
+                                paddingRight:"5px",
+                            }}><IoEllipse /></span> Pickup
                         </Button>
                     </td>
                     </tr>
