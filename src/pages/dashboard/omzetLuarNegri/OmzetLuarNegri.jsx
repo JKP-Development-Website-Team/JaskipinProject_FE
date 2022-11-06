@@ -1,11 +1,12 @@
 import React, {useState} from 'react'
 import { Container, Row, Button } from "react-bootstrap";
 import NavbarAdmin from "../../../components/navbar/NavbarAdmin";
-import Sidebar from "../../../components/sidebar/Sidebar";
+// import Sidebar from "../../../components/sidebar/Sidebar";
 
 import {AiOutlineRight} from 'react-icons/ai'
 import {BsChevronExpand} from 'react-icons/bs'
 import CompHead from '../../../components/omzetLuar/CompHead';
+import SidebarDua from '../../../components/sidebar/SidebarDua';
 
 const OmzetLuarNegri = () => {
 
@@ -22,7 +23,8 @@ const OmzetLuarNegri = () => {
     <Container>
       <Row className=''>
         <div style={{background:"salmon"}}>
-          <Sidebar animated={animated} setAnimated={setAnimated} />             
+          {/* <Sidebar animated={animated} setAnimated={setAnimated} />   */}
+          <SidebarDua animated={animated} setAnimated={setAnimated} />          
         </div>
         <div className="ps-3 " style={{
           background:"",
@@ -109,7 +111,6 @@ const OmzetLuarNegri = () => {
 
           {/* Components Here */}
           <CompHead />
-
           {/* Components Here */}
 
         </div>
