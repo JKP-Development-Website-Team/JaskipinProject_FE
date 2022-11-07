@@ -19,6 +19,7 @@ const SidebarDua = ({animated, setAnimated}) => {
       <LogoJaskipin animated={animated} setAnimated={setAnimated} />
       <ul className="sidebar-nav" id="sidebar-nav">
         {categories.map((item, idx) => {
+          let children = item.children
             return (
                 <li 
                     key={idx}
@@ -61,66 +62,18 @@ const SidebarDua = ({animated, setAnimated}) => {
                     borderRadius:"0 0 10px 10px",
                   }}
                 >
-                  {item?.children?.chilOne ? (
+                 {children?.map((child, idx) => (
                   <li>
-                    <a href="#" style={{
-                        color:"white",
-                        textDecoration:"none"
-                    }}>
-                      <span>{item?.children?.chilOne}</span>
-                    </a>
-                  </li>
-                  ): ""}
-                  {item?.children?.chilTwo?.nameChil ? (
-                  <li>
-                    <Link to={item?.children?.chilTwo?.link} style={{
-                        color:"white",
-                        textDecoration:"none"
-                    }}>
-                      <span>{item?.children?.chilTwo?.nameChil}</span>
-                    </Link>
-                  </li>
-                  ): ""}
-                  {item?.children?.chilThree ? (
-                  <li>
-                    <a href="#" style={{
-                        color:"white",
-                        textDecoration:"none"
-                    }}>
-                      <span>{item?.children?.chilThree}</span>
-                    </a>
-                  </li>
-                  ): ""}
-                  {item?.children?.chilFour ? (
-                  <li>
-                    <a href="#" style={{
-                        color:"white",
-                        textDecoration:"none"
-                    }}>
-                      <span>{item?.children?.chilFour}</span>
-                    </a>
-                  </li>
-                  ): ""}
-                  {item?.children?.chilFive ? (
-                  <li>
-                    <a href="#" style={{
-                        color:"white",
-                        textDecoration:"none"
-                    }}>
-                      <span>{item?.children?.chilFive}</span>
-                    </a>
-                  </li>
-                  ): ""}
-                  {item?.children?.chilSix ? (
-                  <li>
-                    <a href="#" style={{
-                        color:"white",
-                        textDecoration:"none"
-                    }}>
-                      <span>{item?.children?.chilSix}</span>
-                    </a>
-                  </li>
-                  ): ""}
+                  <Link to={child?.chilLink} style={{
+                      color:"white",
+                      textDecoration:"none"
+                  }}>
+                    <span>{child?.nameChil}</span>
+                  </Link>
+                </li>
+                 ))} 
+
+                  
                 </ul>
               </li>
             )
