@@ -29,7 +29,7 @@ const SidebarDua = ({ animated, setAnimated }) => {
                 className="nav-link collapsed d-flex justify-content-between"
                 data-bs-target="#components-nav"
                 data-bs-toggle="collapse"
-                href="# "
+                href="#"
                 onClick={() => setShowContent(item.name)}
                 style={{
                   backgroundColor:
@@ -76,7 +76,7 @@ const SidebarDua = ({ animated, setAnimated }) => {
                 {item?.children?.chilTwo ? (
                   <li>
                     <a
-                      href="# "
+                      href="#"
                       style={{
                         color: "white",
                         textDecoration: "none",

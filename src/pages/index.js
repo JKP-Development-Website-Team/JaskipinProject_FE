@@ -4,3 +4,4 @@ export {default as OmzetLuarNegri} from './dashboard/omzetLuarNegri/OmzetLuarNeg
 export {default as OmzetDomestik} from './dashboard/omzetDomestik/OmzetDomestik'
 export {default as Member} from './calonAgen/member/Member'
 export {default as Home} from './home/Home'
+export {default as BookingPage} from './luarNegeri/booking/BookingPage'

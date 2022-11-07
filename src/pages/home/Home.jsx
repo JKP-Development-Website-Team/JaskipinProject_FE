@@ -10,11 +10,11 @@ const Home = () => {
   console.log(animated)
   return (
     <Container >
-      <NavbarAdmin animated={animated} />
+      {/* <NavbarAdmin animated={animated} /> */}
         <Row>
             <Col>
                 {/* <Sidebar animated={animated} setAnimated={setAnimated} /> */}
-                <SidebarDua animated={animated} setAnimated={setAnimated}/>
+                {/* <SidebarDua animated={animated} setAnimated={setAnimated}/> */}
             </Col>
         </Row>
     </Container>
