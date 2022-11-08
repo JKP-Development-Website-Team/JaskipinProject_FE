@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const API = axios.create({
-    baseURL: "https://dummyjson.com/"
+    baseURL: process.env.REACT_APP_BASE_URL
 })
