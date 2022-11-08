@@ -93,7 +93,6 @@ const Auth = () => {
       </div>
       {/* Form Auth */}
       <div
-        className=""
         style={{
           flex: "1",
           height: "100vh",
