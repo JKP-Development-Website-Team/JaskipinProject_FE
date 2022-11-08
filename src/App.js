@@ -14,6 +14,8 @@ import {
 import ScanBarcode from "./pages/luarNegeri/scanBarcode/ScanBarcode";
 import SidebarDua from "./components/sidebar/SidebarDua";
 import NavbarAdmin from "./components/navbar/NavbarAdmin";
+import LuarNegeri from "./pages/luarNegeri/LuarNegeri";
+import Domestik from "./pages/Domestik/Domestik";
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         <Route path="/member" element={<Member />} />
         <Route path="/scan-barcode" element={<ScanBarcode />} />
         <Route path="/booking" element={<BookingPage />} />
+        <Route path="/transaksi-luar-negeri" element={<LuarNegeri />} />
+        <Route path="/transaksi-Domestik" element={<Domestik />} />
       </Routes>
     </div>
   );
