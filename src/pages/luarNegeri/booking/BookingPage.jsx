@@ -6,9 +6,11 @@ import BookingTable from '../../../components/bookingTable/BookingTable'
 import NavbarAdmin from '../../../components/navbar/NavbarAdmin'
 import SidebarDua from '../../../components/sidebar/SidebarDua'
 import { months } from '../../../components/utils/Constant'
+import { useSelector } from 'react-redux'
 
 const BookingPage = () => {
-    const [animated, setAnimated] = useState('')
+  const animated = useSelector(state => state.animasiSlice.value)
+
   return (
     <div>
             <div
@@ -22,7 +24,7 @@ const BookingPage = () => {
           <Row className=''>
             <div style={{ background: "salmon" }}>
               {/* <Sidebar animated={animated} setAnimated={setAnimated} /> */}
-              <SidebarDua setAnimated={setAnimated} />
+              <SidebarDua />
             </div>
             <div className="ps-3 " style={{
               background: "",

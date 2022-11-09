@@ -69,7 +69,7 @@ const BookingTable = () => {
                 <tbody>
 
                     {datas.map((data, index) => (
-                    <tr>
+                    <tr key={index}>
                     <td>{data.nama}</td>
                     <td>{data.no_hp}</td>
                     <td>{data.tanggal}</td>

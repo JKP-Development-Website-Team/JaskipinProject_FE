@@ -3,12 +3,14 @@ import LogoJaskipin from "../logo-jskpn/LogoJaskipin";
 import { categories } from "../../components/utils/Constant";
 import {SlArrowRight, SlArrowDown} from 'react-icons/sl'
 import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-const SidebarDua = ({animated, setAnimated}) => {
+const SidebarDua = () => {
 
   const [selectedCategory, setSelectedCategory] = useState('')
   const [showContent, setShowContent] = useState('')
   const navigate = useNavigate()
+  const animated = useSelector(state => state.animasiSlice.value)
 
   const [isOpen, setIsOpen] = useState(false)
 
@@ -16,7 +18,7 @@ const SidebarDua = ({animated, setAnimated}) => {
     <aside id="sidebar" className="sidebar" style={{
       width: animated ? "196px" : "292px"
     }}>
-      <LogoJaskipin animated={animated} setAnimated={setAnimated} />
+      <LogoJaskipin animated={animated} />
       <ul className="sidebar-nav" id="sidebar-nav">
         {categories.map((item, idx) => {
           let children = item.children

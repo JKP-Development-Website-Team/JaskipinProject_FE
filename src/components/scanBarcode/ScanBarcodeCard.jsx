@@ -1,13 +1,15 @@
 import React from "react";
 import { Button, Form, Row, Col } from "react-bootstrap";
+import {useSelector} from 'react-redux'
 
 function ScanBarcodeCard() {
+  const animated = useSelector(state => state.animasiSlice.value)
   return (
     <Form
       style={{
         height: "22rem",
-        // width: "64.313rem",
-        width: "62rem",
+        width: animated ? "69rem" : "62rem",
+        transition:"0.5s",
         left: "350px",
         top: "184px",
         borderRadius: "20px",
