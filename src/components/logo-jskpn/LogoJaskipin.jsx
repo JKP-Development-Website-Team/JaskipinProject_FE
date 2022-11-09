@@ -1,9 +1,15 @@
 import React from "react";
 import Logo from "../../Image/logo.png";
 import LogoNotFull from '../../Image/logo-not-full.png'
+import { useSelector, useDispatch } from "react-redux";
+import {animatedReducers} from '../../redux/animasi/AnimasiSlice'
 
-const LogoJaskipin = ({animated, setAnimated}) => {
+const LogoJaskipin = () => {
 
+  const animated = useSelector(state => state.animasiSlice.value)
+  const dispatch = useDispatch()
+
+  console.log(animated)
   return (
     <div
       style={{
@@ -28,7 +34,7 @@ const LogoJaskipin = ({animated, setAnimated}) => {
             alt="Jaskipin"
             width={64}
             height={55}
-            onClick={() => setAnimated(false)}
+            onClick={() => dispatch(animatedReducers(false))}
             style={{
                 transition:"0.5s",
               }}
@@ -39,7 +45,7 @@ const LogoJaskipin = ({animated, setAnimated}) => {
             alt="Jaskipin"
             width={175}
             height={51}
-            onClick={() => setAnimated(true)}
+            onClick={() => dispatch(animatedReducers(true))}
             style={{
                 transition:"0.5s",
               }}
