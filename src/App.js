@@ -14,6 +14,8 @@ import {
 import ScanBarcode from "./pages/luarNegeri/scanBarcode/ScanBarcode";
 import SidebarDua from "./components/sidebar/SidebarDua";
 import NavbarAdmin from "./components/navbar/NavbarAdmin";
+import LuarNegeri from "./pages/luarNegeri/LuarNegeri";
+import Domestik from "./pages/Domestik/Domestik";
 
 function App() {
   return (
@@ -57,6 +59,16 @@ function App() {
         <Route path="/booking" element={
           <Layout>
             <BookingPage />
+          </Layout>
+        } />
+        <Route path="/transaksi-luar-negeri" element={
+          <Layout>
+            <LuarNegeri />
+          </Layout>
+        } />
+        <Route path="/transaksi-domestik" element={
+          <Layout>
+            <Domestik />
           </Layout>
         } />
       </Routes>
