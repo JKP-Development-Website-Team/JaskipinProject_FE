@@ -23,11 +23,6 @@ const BookingPage = () => {
         <Container>
           <Row className=''>
             <div style={{ background: "salmon" }}>
-<<<<<<< HEAD
-              {/* <Sidebar animated={animated} setAnimated={setAnimated} /> */}
-              <SidebarDua />
-=======
->>>>>>> acc5c7b (Form Modal Transaksi Luar Negeri)
             </div>
             <div className="ps-3 " style={{
               background: "",
