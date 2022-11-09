@@ -16,15 +16,18 @@ const BookingPage = () => {
             <div
         style={{
           backgroundColor: "#D9D9D9",
-          minHeight: "100vh",
+          minHeight: "100%",
         }}
       >
         <NavbarAdmin animated={animated} />
         <Container>
           <Row className=''>
             <div style={{ background: "salmon" }}>
+<<<<<<< HEAD
               {/* <Sidebar animated={animated} setAnimated={setAnimated} /> */}
               <SidebarDua />
+=======
+>>>>>>> acc5c7b (Form Modal Transaksi Luar Negeri)
             </div>
             <div className="ps-3 " style={{
               background: "",

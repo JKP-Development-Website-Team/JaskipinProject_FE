@@ -22,7 +22,11 @@ const CalonAgen = () => {
           <Row className=''>
             <div style={{ background: "salmon" }}>
               {/* <Sidebar animated={animated} setAnimated={setAnimated} /> */}
+<<<<<<< HEAD
               <SidebarDua />
+=======
+              {/* <SidebarDua animated={animated} setAnimated={setAnimated}/> */}
+>>>>>>> acc5c7b (Form Modal Transaksi Luar Negeri)
             </div>
             <div className="ps-3 " style={{
               background: "",

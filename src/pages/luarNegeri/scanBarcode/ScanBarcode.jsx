@@ -21,8 +21,6 @@ function ScanBarcode() {
         <Container>
           <Row className="">
             <div style={{ background: "salmon" }}>
-              {/* <Sidebar animated={animated} setAnimated={setAnimated} /> */}
-              <SidebarDua />
             </div>
             <div
               className="ps-3 "
