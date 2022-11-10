@@ -29,7 +29,7 @@ function App() {
         }
       />
       <Route
-        path="/calon-agen"
+        path="/calon-agen/agen"
         element={
           <Layout>
             <CalonAgen />
@@ -37,7 +37,7 @@ function App() {
         }
       />
       <Route
-        path="/tarif"
+        path="/luar-negeri/tarif"
         element={
           <Layout>
             <Tarif />
@@ -45,7 +45,7 @@ function App() {
         }
       />
       <Route
-        path="/omzet-luar-negri"
+        path="/dashboard/omzet-luar-negri"
         element={
           <Layout>
             <OmzetLuarNegri />
@@ -53,7 +53,7 @@ function App() {
         }
       />
       <Route
-        path="/member"
+        path="/calon-agen/member"
         element={
           <Layout>
             <Member />
@@ -61,7 +61,7 @@ function App() {
         }
       />
       <Route
-        path="/tracking"
+        path="/luar-negeri/tracking"
         element={
           <Layout>
             <ScanBarcode />
@@ -69,7 +69,7 @@ function App() {
         }
       />
       <Route
-        path="/booking"
+        path="/luar-negeri/booking"
         element={
           <Layout>
             <BookingPage />
@@ -77,7 +77,7 @@ function App() {
         }
       />
       <Route
-        path="/transaksi-luar-negeri"
+        path="/luar-negeri/transaksi"
         element={
           <Layout>
             <TransaksiLuarNegeri />
@@ -85,7 +85,7 @@ function App() {
         }
       />
       <Route
-        path="/luar-negeri/transaksi-domestik"
+        path="/domestik/transaksi-domestik"
         element={
           <Layout>
             <Domestik />

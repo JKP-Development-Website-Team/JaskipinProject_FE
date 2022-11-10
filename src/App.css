@@ -156,6 +156,7 @@ box-shadow:
 
 .sidebar-nav .nav-item {
   margin-bottom: 15px;
+  transition: 0.5s;
 }
 
 .sidebar-nav .nav-heading {
@@ -172,7 +173,7 @@ box-shadow:
   font-size: 15px;
   font-weight: 600;
   color: #4154f1;
-  transition: 0.3;
+  transition: 0.5s;
   background: #f6f9ff;
   padding: 10px 15px;
 }
@@ -192,13 +193,8 @@ box-shadow:
   color: #899bbd;
 }
 
-.sidebar-nav .nav-link:hover {
-  color: #4154f1;
-  background: #f6f9ff;
-}
-
-.sidebar-nav .nav-link:hover i {
-  color: #4154f1;
+.sidebar-nav .nav-link .nav-item-name {
+  animation: opacityTextName 1.2s;
 }
 
 .sidebar-nav .nav-link .bi-chevron-down {
@@ -240,6 +236,16 @@ box-shadow:
 
 .sidebar-nav .nav-content a.active i {
   background-color: #4154f1;
+}
+
+@keyframes opacityTextName {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* Tambah Transaksi luar Form Section */

@@ -18,10 +18,11 @@ const SidebarDua = () => {
     <aside id="sidebar" className="sidebar" style={{
       width: animated ? "196px" : "292px"
     }}>
-      <LogoJaskipin animated={animated} />
       <ul className="sidebar-nav" id="sidebar-nav">
         {categories.map((item, idx) => {
           let children = item.children
+          let spaceClass = animated ? "" : "justify-content-between"
+
             return (
                 <li 
                     key={idx}
@@ -30,7 +31,7 @@ const SidebarDua = () => {
                     onMouseLeave={() => setSelectedCategory('')}
                 >
                 <Link
-                  className="nav-link collapsed d-flex justify-content-between"
+                  className={`nav-link collapsed d-flex ${spaceClass}`}
                   data-bs-target="#components-nav"
                   data-bs-toggle="collapse"
                   to={item.chilTwo}
@@ -46,7 +47,7 @@ const SidebarDua = () => {
                    >
                     <div>
                         <img className="me-3" src={item.icon} alt="" />
-                        {animated ? "" : (<span >{item.name}</span>) }
+                        {animated ? null : (<span className='nav-item-name'>{item.name}</span>) }
                         
                     </div>
                     {showContent === item.name ? (
