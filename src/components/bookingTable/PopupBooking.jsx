@@ -26,7 +26,7 @@ function PopupBooking(data) {
             </Button>
 
             <Modal show={show} onHide={handleClose} size='lg' backdrop="static">
-                <Modal.Header closeButton >
+                <Modal.Header closeButton className='sticky-top'>
                     <div>
                         <div className='d-flex flex-row'>
                             <Modal.Title>Detail Booking</Modal.Title>

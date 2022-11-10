@@ -3,48 +3,119 @@ import { Button } from 'react-bootstrap'
 import {IoEllipse} from 'react-icons/io5'
 import PopupBooking from './PopupBooking'
 
+export const datas = [
+    {
+        nama:'Jhon Doe',
+        no_booking :'00000000',
+        no_hp:'0858000000',
+        isi_paket: 'makanan',
+        tanggal:'22 maret 2022',
+        berat:'2 Kg',
+        status:'Sudah dipickup',
+        tujuan:'Aceh',
+        jns_paket:'paket',
+        asal :'cirebon',
+        kurir: 'Si Cepat',
+        estimasi: '2-3 hari',
+        harga: '15000',
+        w_penjemputan: 'sumber',
+        alamat :'jl. lorem',
+        volume : '22 X 10 X 10'
+    },
+    {
+        nama:'Jhon wick',
+        no_booking :'00000000',
+        no_hp:'0858000000',
+        isi_paket: 'makanan',
+        tanggal:'22 maret 2022',
+        berat:'2 Kg',
+        status:'Sudah dipickup',
+        tujuan:'Aceh',
+        jns_paket:'paket',
+        asal :'cirebon',
+        kurir: 'Si Cepat',
+        estimasi: '2-3 hari',
+        harga: '15000',
+        w_penjemputan: 'sumber',
+        alamat :'jl. lorem',
+        volume : '22 X 10 X 10'
+    },
+    {
+        nama:'Jhon wickWick',
+        no_booking :'00000000',
+        no_hp:'0858000000',
+        isi_paket: 'makanan',
+        tanggal:'22 maret 2022',
+        berat:'2 Kg',
+        status:'Sudah dipickup',
+        tujuan:'Aceh',
+        jns_paket:'paket',
+        asal :'cirebon',
+        kurir: 'Si Cepat',
+        estimasi: '2-3 hari',
+        harga: '15000',
+        w_penjemputan: 'sumber',
+        alamat :'jl. lorem',
+        volume : '22 X 10 X 10'
+    },
+    {
+        nama:'Jhon Jhon',
+        no_booking :'00000000',
+        no_hp:'0858000000',
+        isi_paket: 'makanan',
+        tanggal:'22 maret 2022',
+        berat:'2 Kg',
+        status:'Sudah dipickup',
+        tujuan:'Aceh',
+        jns_paket:'paket',
+        asal :'cirebon',
+        kurir: 'Si Cepat',
+        estimasi: '2-3 hari',
+        harga: '15000',
+        w_penjemputan: 'sumber',
+        alamat :'jl. lorem',
+        volume : '22 X 10 X 10'
+    },
+    {
+        nama:'Jhon Jhon',
+        no_booking :'00000000',
+        no_hp:'0858000000',
+        isi_paket: 'makanan',
+        tanggal:'22 maret 2022',
+        berat:'2 Kg',
+        status:'Sudah dipickup',
+        tujuan:'Aceh',
+        jns_paket:'paket',
+        asal :'cirebon',
+        kurir: 'Si Cepat',
+        estimasi: '2-3 hari',
+        harga: '15000',
+        w_penjemputan: 'sumber',
+        alamat :'jl. lorem',
+        volume : '22 X 10 X 10'
+    },
+    {
+        nama:'Jhon Jhon',
+        no_booking :'00000000',
+        no_hp:'0858000000',
+        isi_paket: 'makanan',
+        tanggal:'22 maret 2022',
+        berat:'2 Kg',
+        status:'Sudah dipickup',
+        tujuan:'Aceh',
+        jns_paket:'paket',
+        asal :'cirebon',
+        kurir: 'Si Cepat',
+        estimasi: '2-3 hari',
+        harga: '15000',
+        w_penjemputan: 'sumber',
+        alamat :'jl. lorem',
+        volume : '22 X 10 X 10'
+    },
+]
 
 const BookingTable = () => {
-    const datas = [
-        {
-            nama:'Jhon Doe',
-            no_booking :'00000000',
-            no_hp:'0858000000',
-            isi_paket: 'makanan',
-            tanggal:'22 maret 2022',
-            berat:'2 Kg',
-            status:'Sudah dipickup',
-            tujuan:'Aceh',
-            jns_paket:'paket',
-            asal :'cirebon',
-            kurir: 'Si Cepat',
-            estimasi: '2-3 hari',
-            harga: '15000',
-            w_penjemputan: 'sumber',
-            alamat :'jl. lorem',
-            volume : '22 X 10 X 10'
-        },
-        {
-            nama:'Jhon wick',
-            no_booking :'00000000',
-            no_hp:'0858000000',
-            isi_paket: 'makanan',
-            tanggal:'22 maret 2022',
-            berat:'2 Kg',
-            status:'Sudah dipickup',
-            tujuan:'Aceh',
-            jns_paket:'paket',
-            asal :'cirebon',
-            kurir: 'Si Cepat',
-            estimasi: '2-3 hari',
-            harga: '15000',
-            w_penjemputan: 'sumber',
-            alamat :'jl. lorem',
-            volume : '22 X 10 X 10'
-        },
-    ]
-
-
+    
 
   return (
     <div>

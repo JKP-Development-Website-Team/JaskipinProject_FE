@@ -3,9 +3,8 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 
 function DropdownDomestik() {
   return (
-    <DropdownButton className='' variant='light' style={{color:'#fff'}} title="Atur Tampilan">
-      <Dropdown.ItemText>Atur Tampilan</Dropdown.ItemText>
-      <Dropdown.Item ></Dropdown.Item>
+    <DropdownButton variant='secondary' style={{color:'#fff'}} title="filter">
+      <Dropdown.Item >Another action</Dropdown.Item>
       <Dropdown.Item >Another action</Dropdown.Item>
       <Dropdown.Item >Something else</Dropdown.Item>
     </DropdownButton>
