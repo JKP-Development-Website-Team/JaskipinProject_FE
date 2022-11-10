@@ -85,7 +85,7 @@ function App() {
         }
       />
       <Route
-        path="/transaksi-domestik"
+        path="/luar-negeri/transaksi-domestik"
         element={
           <Layout>
             <Domestik />

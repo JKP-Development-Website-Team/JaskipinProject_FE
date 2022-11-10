@@ -49,7 +49,7 @@ export const categories = [
             },
             {
                 nameChil:"Booking",
-                chilLink:"/booking"
+                chilLink:"/luar-negeri/transaksi-domestik"
             },
             {
                 nameChil:"Request AWB",
