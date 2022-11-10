@@ -7,86 +7,98 @@ import ToastDropDown from "../../components/LuarNegeri/DropDownLuarNegeri";
 import NavbarAdmin from "../../components/navbar/NavbarAdmin";
 import SidebarDua from "../../components/sidebar/SidebarDua";
 import TabelLuarNegeri from "../../components/tabel/TabelLuarNegeri";
-import union from '../../Image/Union.png'
-import union2 from '../../Image/Union (2).png'
+import union from "../../Image/Union.png";
+import union2 from "../../Image/Union (2).png";
 import DropdownDomestik from "../../components/Domestik/DropDownDomestik";
 import TabelDomestik from "../../components/tabel/TabelDomestik";
 import { useSelector } from "react-redux";
 
-
-
 const Domestik = () => {
-    const animated = useSelector(state => state.animasiSlice.value)
-    return (
-        <>
-            <div>
+  const animated = useSelector((state) => state.animasiSlice.value);
+  return (
+    <>
+      <div>
+        <div
+          style={{
+            height: "100vh",
+          }}
+        >
+          <Container>
+            <Row className="">
+              <div
+                className="ps-3 "
+                style={{
+                  background: "",
+                  width: animated ? "85%" : "75%",
+                  position: "absolute",
+                  transition: "0.5s",
+                  left: animated ? "200px" : "320px",
+                  top: "100px",
+                }}
+              >
+                {/* Batas Animasi*/}
                 <div
-                    style={{
-                        backgroundColor: "#D9D9D9",
-                        minHeight: "100vh",
-                    }}
+                  style={{
+                    marginTop: "",
+                  }}
+                  className="d-flex align-items-center justify-content-start"
                 >
-                    <NavbarAdmin animated={animated} />
-                    <Container>
-                        <Row className=''>
-                            <div className="ps-3 " style={{
-                                background: "",
-                                width: animated ? "85%" : "75%",
-                                position: "absolute",
-                                transition: "0.5s",
-                                left: animated ? "200px" : "320px",
-                                top: "125px"
-                            }}>
-                                {/* Batas Animasi*/}
-                                <div
-                                    style={{
-                                        marginTop: "",
-                                    }}
-                                    className="d-flex align-items-center justify-content-start"
-                                >
-                                    <div className="">
-                                        <h4 className='m-2 fw-bold' style={{ fontSize: "20px" }}>Transaksi Pengiriman Domestik</h4>
-                                    </div>
-                                </div>
-                                <div className="d-flex justify-content-between">
-                                    <div className="d-flex">
-                                        <div className="me-5">
-                                            <InputGroup className="w-100">
-                                                <InputGroup.Text id="basic-addon1" style={{ backgroundColor: '#EFEFEF', borderRadius: '20px 0px 0px 20px' }} className="">
-                                                    <BiSearch />
-                                                </InputGroup.Text>
-                                                <Form.Control
-                                                    type="text"
-                                                    name="Search"
-                                                    placeholder="Cari "
-                                                    style={{ borderLeft: 'none', borderRadius: '0px 20px 20px 0px', backgroundColor: '#EFEFEF' }}
-                                                // onChange={handleChange}
-                                                />
-                                            </InputGroup>
-                                        </div>
-                                        <div className="me-4">
-                                            <DropdownDomestik />
-                                        </div>
-                                    </div>
-                                    <div className="d-flex flex-row-reverse">
-                                        <div>
-
-                                            <Button style={{ backgroundColor: '#0843AD', border: 'none' }} className=''>
-                                                <img src={union2} alt="" className="me-1 mb-1" />
-                                                Tambah Transaksi</Button>{' '}
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <TabelDomestik />
-                                {/* Batas Animasi */}
-                            </div>
-                        </Row>
-                    </Container>
+                  <div className="">
+                    <h4 className="m-2 fw-bold" style={{ fontSize: "20px" }}>
+                      Transaksi Pengiriman Domestik
+                    </h4>
+                  </div>
                 </div>
-            </div>
-        </>
-    );
+                <div className="d-flex justify-content-between">
+                  <div className="d-flex gap-3">
+                    <div className="">
+                      <InputGroup className="shadow-sm">
+                        <InputGroup.Text
+                          id="basic-addon1"
+                          style={{
+                            backgroundColor: "#EFEFEF",
+                            borderRadius: "10px 0px 0px 10px",
+                          }}
+                          className=""
+                        >
+                          <BiSearch />
+                        </InputGroup.Text>
+                        <Form.Control
+                          type="text"
+                          name="Search"
+                          placeholder="Cari"
+                          style={{
+                            borderLeft: "none",
+                            borderRadius: "0px 7px 7px 0px",
+                            backgroundColor: "#EFEFEF",
+                          }}
+                        />
+                      </InputGroup>
+                    </div>
+                      <DropdownDomestik />
+                  </div>
+                  <div className="d-flex flex-row-reverse">
+                    <div>
+                      <Button
+                        style={{ backgroundColor: "#0843AD", border: "none" }}
+                        className=""
+                      >
+                        <img src={union2} alt="" className="me-1 mb-1" />
+                        Tambah Transaksi
+                      </Button>{" "}
+                    </div>
+                  </div>
+                </div>
+
+                <TabelDomestik />
+                {/* Batas Animasi */}
+              </div>
+            </Row>
+          </Container>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Domestik;

@@ -65,7 +65,7 @@ const SidebarDua = () => {
                   }}
                 >
                  {children?.map((child, idx) => (
-                  <li>
+                  <li key={idx}>
                   <Link to={child?.chilLink} style={{
                       color:"white",
                       textDecoration:"none"
