@@ -73,7 +73,7 @@ box-shadow:
 
 /* Chart Sections */
 .chartBg{
-  padding: 15px;
+    padding: 15px;
     background-color: #ffffff;
     border-radius: 20px;
 }
@@ -240,3 +240,17 @@ box-shadow:
 .sidebar-nav .nav-content a.active i {
   background-color: #4154f1;
 }
+
+/* Tambah Transaksi luar Form Section */
+.head-title-input{
+  font-weight:700;
+  font-size:14px;
+  color:#000000;
+}
+
+.text-deskripsi {
+  font-size:12px;
+  font-weight:600;
+}
+
+/* Tambah Transaksi luar Form Section */

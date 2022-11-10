@@ -3,15 +3,15 @@ import { Container, Row, InputGroup, Form, Button } from "react-bootstrap";
 // import TabelCalonAgen from "../../../components/tabel/TabelCalonAgen";
 // import Sidebar from "../../../components/sidebar/Sidebar";
 import { BiSearch } from "react-icons/bi";
-import NavbarAdmin from "../../components/navbar/NavbarAdmin";
-import SidebarDua from "../../components/sidebar/SidebarDua";
-import TabelLuarNegeri from "../../components/tabel/TabelLuarNegeri";
-import union from '../../Image/Union.png'
-import union2 from '../../Image/Union (2).png'
-import DropdownLuarNegeri from "../../components/LuarNegeri/DropDownLuarNegeri";
+import NavbarAdmin from "../../../components/navbar/NavbarAdmin";
+import SidebarDua from "../../../components/sidebar/SidebarDua";
+import TabelLuarNegeri from "../../../components/tabel/TabelLuarNegeri";
+import union from '../../../Image/Union.png'
+import union2 from '../../../Image/Union (2).png'
+import DropdownLuarNegeri from "../../../components/LuarNegeri/DropDownLuarNegeri";
 
 
-const LuarNegeri = () => {
+const TransaksiLuarNegeri = () => {
     const [animated, setAnimated] = useState(false);
 
     return (
@@ -28,7 +28,6 @@ const LuarNegeri = () => {
                         <Row className=''>
                             <div style={{ background: "salmon" }}>
                                 {/* <Sidebar animated={animated} setAnimated={setAnimated} /> */}
-                                <SidebarDua animated={animated} setAnimated={setAnimated} />
                             </div>
                             <div className="ps-3 " style={{
                                 background: "",
@@ -121,4 +120,4 @@ const LuarNegeri = () => {
     );
 };
 
-export default LuarNegeri;
+export default TransaksiLuarNegeri;

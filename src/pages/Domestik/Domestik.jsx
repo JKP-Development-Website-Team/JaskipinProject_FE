@@ -11,11 +11,12 @@ import union from '../../Image/Union.png'
 import union2 from '../../Image/Union (2).png'
 import DropdownDomestik from "../../components/Domestik/DropDownDomestik";
 import TabelDomestik from "../../components/tabel/TabelDomestik";
+import { useSelector } from "react-redux";
+
 
 
 const Domestik = () => {
-    const [animated, setAnimated] = useState(false);
-
+    const animated = useSelector(state => state.animasiSlice.value)
     return (
         <>
             <div>
@@ -28,10 +29,6 @@ const Domestik = () => {
                     <NavbarAdmin animated={animated} />
                     <Container>
                         <Row className=''>
-                            <div style={{ background: "salmon" }}>
-                                {/* <Sidebar animated={animated} setAnimated={setAnimated} /> */}
-                                <SidebarDua animated={animated} setAnimated={setAnimated} />
-                            </div>
                             <div className="ps-3 " style={{
                                 background: "",
                                 width: animated ? "85%" : "75%",

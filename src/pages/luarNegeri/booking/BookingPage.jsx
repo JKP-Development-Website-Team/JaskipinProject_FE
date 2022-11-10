@@ -6,23 +6,23 @@ import BookingTable from '../../../components/bookingTable/BookingTable'
 import NavbarAdmin from '../../../components/navbar/NavbarAdmin'
 import SidebarDua from '../../../components/sidebar/SidebarDua'
 import { months } from '../../../components/utils/Constant'
+import { useSelector } from 'react-redux'
 
 const BookingPage = () => {
-    const [animated, setAnimated] = useState('')
+  const animated = useSelector(state => state.animasiSlice.value)
+
   return (
     <div>
             <div
         style={{
           backgroundColor: "#D9D9D9",
-          minHeight: "100vh",
+          minHeight: "100%",
         }}
       >
         <NavbarAdmin animated={animated} />
         <Container>
           <Row className=''>
             <div style={{ background: "salmon" }}>
-              {/* <Sidebar animated={animated} setAnimated={setAnimated} /> */}
-              <SidebarDua setAnimated={setAnimated} />
             </div>
             <div className="ps-3 " style={{
               background: "",

@@ -5,10 +5,10 @@ import NavbarAdmin from "../../../components/navbar/NavbarAdmin";
 import Sidebar from "../../../components/sidebar/Sidebar";
 import { BiSearch } from "react-icons/bi";
 import SidebarDua from "../../../components/sidebar/SidebarDua";
+import { useSelector } from "react-redux";
 
 const CalonAgen = () => {
-  const [animated, setAnimated] = useState(false);
-
+  const animated = useSelector(state => state.animasiSlice.value)
   return (
     <>
     <div>
@@ -18,12 +18,11 @@ const CalonAgen = () => {
           minHeight: "100vh",
         }}
       >
-        <NavbarAdmin animated={animated} />
         <Container>
           <Row className=''>
             <div style={{ background: "salmon" }}>
               {/* <Sidebar animated={animated} setAnimated={setAnimated} /> */}
-              <SidebarDua animated={animated} setAnimated={setAnimated}/>
+              {/* <SidebarDua animated={animated} setAnimated={setAnimated}/> */}
             </div>
             <div className="ps-3 " style={{
               background: "",

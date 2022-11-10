@@ -4,9 +4,12 @@ import NavbarAdmin from "../../../components/navbar/NavbarAdmin";
 import SidebarDua from "../../../components/sidebar/SidebarDua";
 import ScanBarcodeCard from "../../../components/scanBarcode/ScanBarcodeCard";
 import { useState } from "react";
+import { useSelector } from 'react-redux'
 
 function ScanBarcode() {
-  const [animated, setAnimated] = useState(false);
+
+  const animated = useSelector(state => state.animasiSlice.value)
+
   return (
     <div>
       <div
@@ -15,12 +18,9 @@ function ScanBarcode() {
           minHeight: "100vh",
         }}
       >
-        <NavbarAdmin animated={animated} />
         <Container>
           <Row className="">
             <div style={{ background: "salmon" }}>
-              {/* <Sidebar animated={animated} setAnimated={setAnimated} /> */}
-              <SidebarDua />
             </div>
             <div
               className="ps-3 "
