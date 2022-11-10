@@ -10,6 +10,7 @@ import TabelLuarNegeri from "../../components/tabel/TabelLuarNegeri";
 import union from '../../Image/Union.png'
 import union2 from '../../Image/Union (2).png'
 import DropdownDomestik from "../../components/Domestik/DropDownDomestik";
+import TabelDomestik from "../../components/tabel/TabelDomestik";
 
 
 const Domestik = () => {
@@ -80,7 +81,7 @@ const Domestik = () => {
                                     </div>
                                 </div>
 
-                                <TabelLuarNegeri />
+                                <TabelDomestik />
                                 {/* Batas Animasi */}
                             </div>
                         </Row>
