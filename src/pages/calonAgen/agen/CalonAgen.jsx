@@ -22,7 +22,7 @@ const CalonAgen = () => {
           <Row className=''>
             <div style={{ background: "salmon" }}>
               {/* <Sidebar animated={animated} setAnimated={setAnimated} /> */}
-              <SidebarDua />
+              {/* <SidebarDua animated={animated} setAnimated={setAnimated}/> */}
             </div>
             <div className="ps-3 " style={{
               background: "",

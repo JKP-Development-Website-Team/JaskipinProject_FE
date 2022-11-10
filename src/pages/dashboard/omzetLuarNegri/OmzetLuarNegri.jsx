@@ -7,10 +7,11 @@ import {AiOutlineRight} from 'react-icons/ai'
 import {BsChevronExpand} from 'react-icons/bs'
 import CompHead from '../../../components/omzetLuar/CompHead';
 import SidebarDua from '../../../components/sidebar/SidebarDua';
+import TambahTransaksi from '../../../components/omzetLuar/TambahTransaksi';
 
 const OmzetLuarNegri = () => {
-
-    const [animated, setAnimated] = useState(false);
+  const [modalShow, setModalShow] = React.useState(false);
+  const [animated, setAnimated] = useState(false);
 
   return (
     <div
@@ -104,7 +105,11 @@ const OmzetLuarNegri = () => {
                     </h4>
                 </div>
 
-                <Button variant='danger' className='py-1'>Reset Filter</Button>
+                <Button onClick={() => setModalShow(true)} variant='danger'>Reset Filter</Button>
+                <TambahTransaksi 
+                  show={modalShow}
+                  onHide={() => setModalShow(false)}
+                />
 
               </div>
             

@@ -16,15 +16,13 @@ const BookingPage = () => {
             <div
         style={{
           backgroundColor: "#D9D9D9",
-          minHeight: "100vh",
+          minHeight: "100%",
         }}
       >
         <NavbarAdmin animated={animated} />
         <Container>
           <Row className=''>
             <div style={{ background: "salmon" }}>
-              {/* <Sidebar animated={animated} setAnimated={setAnimated} /> */}
-              <SidebarDua />
             </div>
             <div className="ps-3 " style={{
               background: "",
