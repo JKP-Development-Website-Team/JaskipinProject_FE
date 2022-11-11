@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Form, Row, Col } from "react-bootstrap";
 import {useSelector} from 'react-redux'
 
-function ScanBarcodeCard() {
+function TrackingCard() {
   const animated = useSelector(state => state.animasiSlice.value)
   return (
     <Form
@@ -50,4 +50,4 @@ function ScanBarcodeCard() {
   );
 }
 
-export default ScanBarcodeCard;
+export default TrackingCard;

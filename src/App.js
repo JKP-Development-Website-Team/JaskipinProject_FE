@@ -11,8 +11,9 @@ import {
   BookingPage,
   Auth,
   TransaksiLuarNegeri,
-  ScanBarcode,
+  Tracking,
   Domestik,
+  ScanBarcode
 } from "./pages";
 
 function App() {
@@ -64,7 +65,7 @@ function App() {
         path="/tracking"
         element={
           <Layout>
-            <ScanBarcode />
+            <Tracking />
           </Layout>
         }
       />
@@ -89,6 +90,14 @@ function App() {
         element={
           <Layout>
             <Domestik />
+          </Layout>
+        }
+      />
+      <Route
+        path="/scan-barcode"
+        element={
+          <Layout>
+            <ScanBarcode />
           </Layout>
         }
       />
