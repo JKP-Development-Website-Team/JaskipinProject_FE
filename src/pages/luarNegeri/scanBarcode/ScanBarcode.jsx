@@ -1,47 +1,170 @@
 import React from "react";
-import { Container, Row } from "react-bootstrap";
-import NavbarAdmin from "../../../components/navbar/NavbarAdmin";
-import SidebarDua from "../../../components/sidebar/SidebarDua";
-import ScanBarcodeCard from "../../../components/scanBarcode/ScanBarcodeCard";
-import { useState } from "react";
-import { useSelector } from 'react-redux'
+import {
+  Button,
+  Container,
+  Dropdown,
+  DropdownButton,
+  Form,
+  InputGroup,
+} from "react-bootstrap";
+import { BiSearch } from "react-icons/bi";
+import { useSelector } from "react-redux";
+import { TbScan } from "react-icons/tb";
+import ScanBarcodeComponent from "../../../components/scanBarcode/ScanBarcodeComponent";
 
-function ScanBarcode() {
-
-  const animated = useSelector(state => state.animasiSlice.value)
-
+const ScanBarcode = () => {
+  const animated = useSelector((state) => state.animasiSlice.value);
   return (
     <div>
       <div
         style={{
           backgroundColor: "#D9D9D9",
-          minHeight: "100vh",
+          minHeight: "200vh",
         }}
       >
-        <Container>
-          <Row className="">
-            <div style={{ background: "salmon" }}>
+        <Container
+          style={{
+            backgroundColor: "black",
+          }}
+        >
+          {/* <Row> */}
+          <div style={{ background: "salmon" }}></div>
+          <div
+            className="ps-3 "
+            style={{
+              background: "",
+              width: animated ? "85%" : "75%",
+              position: "absolute",
+              transition: "0.5s",
+              left: animated ? "200px" : "320px",
+              top: "125px",
+            }}
+          >
+            {/* Batas Animasi*/}
+            <div className="d-flex align-items-center justify-content-between ">
+              <div className="d-flex gap-3 align-items-center">
+                <Button
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    border: "none",
+                    backgroundColor: "#0843AD",
+                    padding: "10px",
+
+                    fontWeight: "600",
+                    fontSize: "12px",
+                  }}
+                >
+                  <TbScan className="me-2" />
+                  Scan Barcode
+                </Button>
+              </div>
+
+              <div className="d-flex justify-content-end align-items-center">
+                <InputGroup>
+                  <InputGroup.Text
+                    id="basic-addon1"
+                    style={{
+                      backgroundColor: "white",
+                      borderRadius: "10px 0px 0px 10px",
+                    }}
+                    className="border-0"
+                  >
+                    <BiSearch />
+                  </InputGroup.Text>
+                  <Form.Control
+                    type="text"
+                    name="Search"
+                    placeholder="Cari No. Order.."
+                    style={{
+                      borderLeft: "none",
+                      borderRadius: "0px 7px 7px 0px",
+                      // backgroundColor: "#EFEFEF",
+                      // outline: "none",
+                    }}
+                    className="me-2 border-0"
+                  />
+
+                  <InputGroup.Text
+                    id="basic-addon1"
+                    style={{
+                      backgroundColor: "white",
+                      borderRadius: "10px 0px 0px 10px",
+                    }}
+                    className="border-0"
+                  >
+                    <BiSearch />
+                  </InputGroup.Text>
+                  <Form.Control
+                    type="text"
+                    name="Search"
+                    placeholder="Cari No. Resi.."
+                    style={{
+                      borderLeft: "none",
+                      borderRadius: "0px 7px 7px 0px",
+                      outline: "none",
+                    }}
+                    className="me-2 border-0"
+                  />
+
+                  <InputGroup.Text
+                    id="basic-addon1"
+                    style={{
+                      backgroundColor: "white",
+                      borderRadius: "10px 0px 0px 10px",
+                    }}
+                    className="border-0"
+                  >
+                    <BiSearch />
+                  </InputGroup.Text>
+                  <Form.Control
+                    type="text"
+                    name="Search"
+                    placeholder="Cari Nama Penerima.."
+                    style={{
+                      borderLeft: "none",
+                      borderRadius: "0px 7px 7px 0px",
+
+                      outline: "none",
+                    }}
+                    className="me-2 border-0"
+                  />
+                </InputGroup>
+
+                {/* Dropdown  */}
+                <DropdownButton
+                  title="100"
+                  variant="light"
+                  align="end"
+                  className="me-2 border-0"
+                >
+                  <Dropdown.Item as="button"></Dropdown.Item>
+                </DropdownButton>
+                {/* Dropdown  */}
+
+                {/* DropDown Filter */}
+                <DropdownButton
+                  align="end"
+                  variant="light"
+                  title="Filter"
+                  className="border-0"
+                >
+                  <Dropdown.Item as="button"></Dropdown.Item>
+                </DropdownButton>
+                {/* DropDown */}
+              </div>
             </div>
-            <div
-              className="ps-3 "
-              style={{
-                background: "",
-                width: animated ? "85%" : "75%",
-                position: "absolute",
-                transition: "0.5s",
-                left: animated ? "200px" : "320px",
-                top: "125px",
-              }}
-            >
-              {/* Batas Animasi*/}
-              <ScanBarcodeCard />
-              {/* Batas Animasi */}
-            </div>
-          </Row>
+
+            {/* Component */}
+            <ScanBarcodeComponent />
+            {/* Component */}
+            {/* Batas Animasi */}
+          </div>
+          {/* </Row> */}
         </Container>
       </div>
     </div>
   );
-}
+};
 
 export default ScanBarcode;
