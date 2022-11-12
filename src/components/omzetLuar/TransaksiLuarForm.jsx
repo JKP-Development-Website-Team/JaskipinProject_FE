@@ -162,13 +162,14 @@ const TransaksiLuarForm = () => {
                     <Form.Label className="head-title-input">
                       Berat/Volume
                     </Form.Label>
-                    <div className="d-flex justify-content-between align-items-center flex-wrap ">
+                    <div className="d-flex justify-content-between align-items-center flex-wrap">
                       <Button
                         variant="outline-secondary"
                         style={{
                           fontSize: "12px",
                           fontWeight: "600",
                         }}
+                        className="px-4"
                       >
                         Berat : 10
                       </Button>
@@ -178,6 +179,7 @@ const TransaksiLuarForm = () => {
                           fontSize: "12px",
                           fontWeight: "600",
                         }}
+                        className="px-4"
                       >
                         Panjang : 10
                       </Button>
@@ -187,6 +189,7 @@ const TransaksiLuarForm = () => {
                           fontSize: "12px",
                           fontWeight: "600",
                         }}
+                        className="px-4"
                       >
                         Lebar : 10
                       </Button>
@@ -196,6 +199,7 @@ const TransaksiLuarForm = () => {
                           fontSize: "12px",
                           fontWeight: "600",
                         }}
+                        className="px-4"
                       >
                         Tinggi : 10
                       </Button>
@@ -204,8 +208,8 @@ const TransaksiLuarForm = () => {
                         style={{
                           fontSize: "12px",
                           fontWeight: "600",
-                          marginTop: "0.5em",
                         }}
+                        className='px-4'
                       >
                         0
                       </Button>
@@ -304,6 +308,7 @@ const TransaksiLuarForm = () => {
                     fontSize: "12px",
                     fontWeight: "600",
                   }}
+                  className="px-4"
                 >
                   Barang
                 </Button>
@@ -313,6 +318,7 @@ const TransaksiLuarForm = () => {
                     fontSize: "12px",
                     fontWeight: "600",
                   }}
+                  className="px-4"
                 >
                   Kuantiti
                 </Button>
@@ -322,6 +328,7 @@ const TransaksiLuarForm = () => {
                     fontSize: "12px",
                     fontWeight: "600",
                   }}
+                  className="px-4"
                 >
                   HS COD
                 </Button>
@@ -331,6 +338,7 @@ const TransaksiLuarForm = () => {
                     fontSize: "12px",
                     fontWeight: "600",
                   }}
+                  className="px-4"
                 >
                   Satuan
                 </Button>
@@ -340,13 +348,13 @@ const TransaksiLuarForm = () => {
                     fontSize: "12px",
                     fontWeight: "600",
                   }}
+                  className="px-4"
                 >
                   Total
                 </Button>
               </div>
-              <div className="d-flex justify-content-end mt-3">
+              <div className="d-flex justify-content-end mt-3 gap-3">
                 <Button
-                  className="me-3"
                   style={{
                     backgroundColor: "#F61031",
                     border: "none",

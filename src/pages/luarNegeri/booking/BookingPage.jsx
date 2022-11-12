@@ -19,7 +19,6 @@ const BookingPage = () => {
           minHeight: "100%",
         }}
       >
-        <NavbarAdmin animated={animated} />
         <Container>
           <Row className=''>
             <div style={{ background: "salmon" }}>

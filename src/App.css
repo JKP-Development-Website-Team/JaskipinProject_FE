@@ -156,6 +156,7 @@ box-shadow:
 
 .sidebar-nav .nav-item {
   margin-bottom: 15px;
+  transition: 0.5s;
 }
 
 .sidebar-nav .nav-heading {
@@ -172,7 +173,6 @@ box-shadow:
   font-size: 15px;
   font-weight: 600;
   color: #4154f1;
-  transition: 0.3;
   background: #f6f9ff;
   padding: 10px 15px;
 }
@@ -192,13 +192,8 @@ box-shadow:
   color: #899bbd;
 }
 
-.sidebar-nav .nav-link:hover {
-  color: #4154f1;
-  background: #f6f9ff;
-}
-
-.sidebar-nav .nav-link:hover i {
-  color: #4154f1;
+.sidebar-nav .nav-link .nav-item-name {
+  animation: opacityTextName 1.2s;
 }
 
 .sidebar-nav .nav-link .bi-chevron-down {
@@ -214,6 +209,7 @@ box-shadow:
   padding: 10px 0px 0 15px;
   margin: 0;
   list-style: none;
+  animation: paddingNavContent .6s;
 }
 
 .sidebar-nav .nav-content a {
@@ -224,6 +220,8 @@ box-shadow:
   transition: 0.3;
   padding: 10px 0 10px 40px;
   transition: 0.3s;
+  animation: paddingNavLink .6s;
+
 }
 
 .sidebar-nav .nav-content a i {
@@ -242,6 +240,36 @@ box-shadow:
   background-color: #4154f1;
 }
 
+@keyframes opacityTextName {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes paddingNavContent {
+  from {
+    padding: 0px 0px 0 15px;
+  }
+  to {
+    padding: 10px 0px 0 15px;
+  }
+}
+
+@keyframes paddingNavLink {
+  from {
+    padding: 0px 0 10px 40px;
+  
+  }
+  to {
+    padding: 10px 0 10px 40px;
+
+  }
+}
+
 /* Tambah Transaksi luar Form Section */
 .head-title-input{
   font-weight:700;
@@ -255,3 +283,34 @@ box-shadow:
 }
 
 /* Tambah Transaksi luar Form Section */
+
+/* Scan Barcode table  */
+.div-button{
+  background-color: #70B5F4;
+  padding: 5px 20px;
+  border-radius:10px;
+  cursor:pointer;
+  color:#fff;
+  font-size:12px;
+  font-weight:700;
+}
+
+
+
+.head-title-table{
+  font-weight:700;
+  font-size:14px;
+  color:#fff;
+}
+
+.text-field-table {
+  font-size:14px;
+  font-weight:700;
+  color:#0843AD;
+}
+.text-field-lainnya {
+  font-size:14px;
+  font-weight:500;
+}
+
+/* Scan Barcode table  */
