@@ -12,7 +12,7 @@ export const categories = [
         name:"Dashboard", icon: dashboardLogo,children: [
             {
                 nameChil:"Omzet Luar Negeri",
-                chilLink:"/omzet-luar-negri"
+                chilLink:"/dashboard/omzet-luar-negri"
             },
             {
                 nameChil:"Omzet Domestik",
@@ -41,7 +41,7 @@ export const categories = [
         name:"Luar Negeri", icon: domestik, children: [
             {
                 nameChil:"Transaksi",
-                chilLink:"/transaksi"
+                chilLink:"/luar-negeri/transaksi"
             },
             {
                 nameChil:"Tarif",
@@ -49,7 +49,7 @@ export const categories = [
             },
             {
                 nameChil:"Booking",
-                chilLink:"/luar-negeri/transaksi-domestik"
+                chilLink:"/luar-negeri/booking"
             },
             {
                 nameChil:"Request AWB",
@@ -57,7 +57,7 @@ export const categories = [
             },
             {
                 nameChil:"Scan Barcode",
-                chilLink:"/scan-barcode"
+                chilLink:"/luar-negeri/scan-barcode"
             },
             {
                 nameChil:"Tracking",

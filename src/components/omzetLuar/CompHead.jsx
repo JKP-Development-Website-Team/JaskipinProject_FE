@@ -103,15 +103,11 @@ const options = {
 
 
   return (
-    <div style={{
-        display:"flex",
-        flexDirection: "column",
-        justifyContent: "center"
-        
+    <div style={{        
     }}>
         <div style={{
             display: 'flex',
-            justifyContent:'space-between',  
+            justifyContent:'space-evenly',  
             flexWrap:"wrap",
             // flexDirection:"column"
         }}>
@@ -120,8 +116,8 @@ const options = {
                 <div style={{
                     display: 'flex',
                     margin:"1rem",
-                    width:"234px"
-                    
+                    width:"234px",
+                    // backgroundColor:"red"
                 }}>
                     <div style={{
                         width:"100%"
@@ -149,8 +145,9 @@ const options = {
         </div>
             {/* ===== Chart Section ==== */}
             <div style={{
-                width:"517px",
-                height:"317px",
+                width:"100%",
+                height:"100%",
+                // background:"red"
                 // display: "flex",
                 // justifyContent:"flex-start",
                 // flexWrap:"wrap"
@@ -158,27 +155,24 @@ const options = {
                 <div  style={{
                     width:"100%",
                     height:"100%",
-                    display:"flex",
+                    // display:"flex",
                     // justifyContent:"space-between"
                     alignContent:"center",
-                    // justifyContent:"center"
-                    // flexWrap:"wrap",
-                    // flex:"1"
                 }}>
-                    <Row className='m-3'>
-                        <Col className='mb-3'>
-                            <Line  className='chartBg' data={data} options={options} ></Line>
+                    <Row className='mb-3'>
+                        <Col className=''>
+                            <Line  className='chartBg shadow' data={data} options={options} ></Line>
                         </Col>
                         <Col>
-                            <Line  className='chartBg' data={data} options={options} ></Line>
+                            <Line  className='chartBg shadow' data={data} options={options} ></Line>
                         </Col>
                     </Row>
-                    <Row className='m-3'>
-                        <Col className='mb-3'>
-                            <Line  className='chartBg' data={data} options={options} ></Line>
+                    <Row className=''>
+                        <Col className=''>
+                            <Line  className='chartBg shadow' data={data} options={options} ></Line>
                         </Col>
                         <Col>
-                            <Line  className='chartBg' data={data} options={options} ></Line>
+                            <Line  className='chartBg shadow' data={data} options={options} ></Line>
                         </Col>
                     </Row>
                 </div>
