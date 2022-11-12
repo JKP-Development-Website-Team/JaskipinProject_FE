@@ -1,7 +1,8 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Layout from "./widget/Layout";
+import DefaultRoute from "./components/utils/defaultRouter/DefaultRoute";
 import {
   Home,
   Tarif,
@@ -13,22 +14,51 @@ import {
   TransaksiLuarNegeri,
   Tracking,
   Domestik,
-  ScanBarcode
+  ScanBarcode,
 } from "./pages";
+import { useEffect } from "react";
 
 function App() {
+  const { pathname } = useLocation();
+
+  if (pathname === "/dashboard") {
+    return <Navigate to="/dashboard/omzet-luar-negri" />;
+  }
+  if (pathname === "/calon-agen") {
+    return <Navigate to="/calon-agen/agen" />;
+  }
+  if (pathname === "/luar-negeri") {
+    return <Navigate to="/luar-negeri/transaksi" />;
+  }
+  if (pathname === "/domestik") {
+    return <Navigate to="/domestik/transaksi-domestik" />;
+  }
+  if (pathname === "/keuangan") {
+    return <Navigate to="" />;
+  }
+  if (pathname === "/laporan") {
+    return <Navigate to="" />;
+  }
+  if (pathname === "/pengaturan") {
+    return <Navigate to="" />;
+  }
+  if (pathname === "/laporan-agen") {
+    return <Navigate to="" />;
+  }
+
   return (
     <Routes>
       <Route path="/login" element={<Auth />} />
 
       <Route
-        path="/"
+        path="/dashboard/omzet-luar-negri"
         element={
           <Layout>
-            <Home />
+            <OmzetLuarNegri pathname={pathname} />
           </Layout>
         }
       />
+
       <Route
         path="/calon-agen/agen"
         element={
@@ -45,14 +75,7 @@ function App() {
           </Layout>
         }
       />
-      <Route
-        path="/dashboard/omzet-luar-negri"
-        element={
-          <Layout>
-            <OmzetLuarNegri />
-          </Layout>
-        }
-      />
+
       <Route
         path="/calon-agen/member"
         element={
@@ -98,6 +121,15 @@ function App() {
         element={
           <Layout>
             <ScanBarcode />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/"
+        element={
+          <Layout>
+            <Home />
           </Layout>
         }
       />

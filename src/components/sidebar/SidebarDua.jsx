@@ -10,6 +10,7 @@ const SidebarDua = () => {
 
   const [selectedCategory, setSelectedCategory] = useState('')
   const [showContent, setShowContent] = useState('')
+  const [showItemContent, setShowItemContent] = useState('')
   const navigate = useNavigate()
   const animated = useSelector(state => state.animasiSlice.value)
   const dispatch = useDispatch()
@@ -43,13 +44,11 @@ const SidebarDua = () => {
                   onClick={() => {
                     setShowContent(item.name)
                     if(showContent === item.name) setShowContent('')
-                    if(animated) {
-                      dispatch(animatedReducers(false))
-                    }
+                    if(animated) dispatch(animatedReducers(false))                  
                   }}
                   style={{
                         backgroundColor: showContent === item.name ? '#072E73' : item.name === selectedCategory ? '#072E73' : "#0843AD",
-                        color:"white",
+                        color: showContent === item.name ? "red" :  "#fff" ,
                         fontWeight:"normal",
                         borderRadius:"10px 10px 0 0"
                     }}
@@ -74,8 +73,8 @@ const SidebarDua = () => {
                  children?.map((child, idx) => (
                   
                   <li key={idx}>
-                  <Link to={child?.chilLink} style={{
-                      color:"white",
+                  <Link to={child?.chilLink} onClick={() => setShowItemContent(child?.nameChil)} style={{
+                      color: showItemContent === child?.nameChil ? "red" : "white",
                       textDecoration:"none"
                   }}>
                     <span>{child?.nameChil}</span>

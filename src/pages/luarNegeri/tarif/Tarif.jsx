@@ -19,7 +19,6 @@ const Tarif = () => {
           minHeight: "100vh",
         }}
       >
-        <NavbarAdmin animated={animated} />
         <Container>
           <Row className=''>
             <div style={{ background: "salmon" }}>

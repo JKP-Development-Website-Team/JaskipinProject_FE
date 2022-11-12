@@ -45,7 +45,7 @@ export const categories = [
             },
             {
                 nameChil:"Tarif",
-                chilLink:"/tarif"
+                chilLink:"/luar-negeri/tarif"
             },
             {
                 nameChil:"Booking",
@@ -69,7 +69,7 @@ export const categories = [
     {name:"Domestik", icon: laporan, children: [
             {
                 nameChil:"Transaksi",
-                chilLink:"/transaksi-domestik"
+                chilLink:"/domestik/transaksi-domestik"
             },
             {
                 nameChil:"Booking",
