@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Container, Row, Button } from "react-bootstrap";
 import NavbarAdmin from "../../../components/navbar/NavbarAdmin";
 // import Sidebar from "../../../components/sidebar/Sidebar";
@@ -8,11 +8,12 @@ import {BsChevronExpand} from 'react-icons/bs'
 import CompHead from '../../../components/omzetLuar/CompHead';
 import SidebarDua from '../../../components/sidebar/SidebarDua';
 import TambahTransaksi from '../../../components/omzetLuar/TambahTransaksi';
+import { useSelector } from 'react-redux';
 
 const OmzetLuarNegri = () => {
   const [modalShow, setModalShow] = React.useState(false);
-  const [animated, setAnimated] = useState(false);
-
+  const animated = useSelector(state => state.animasiSlice.value)
+  
   return (
     <div
     style={{
@@ -20,11 +21,9 @@ const OmzetLuarNegri = () => {
       minHeight: "200vh",
     }}
   >
-    <NavbarAdmin animated={animated} />
     <Container>
       <Row className=''>
         <div style={{background:"salmon"}}>
-          <SidebarDua animated={animated} setAnimated={setAnimated} />          
         </div>
         <div className="ps-3 " style={{
           background:"",
@@ -32,7 +31,7 @@ const OmzetLuarNegri = () => {
           position:"absolute",
           transition:"0.5s",
           left: animated ? "200px" : "300px",
-          top:"125px"
+          top:"125px",
         }}>
           {/* Batas Animasi */}
         <div
@@ -42,16 +41,15 @@ const OmzetLuarNegri = () => {
               alignItems:"center"
             }}
           >
-            <div className="py-2 bg-danger">
+            <div className="py-2">
               <h1 className="textHead" style={{fontSize:"20px", marginBottom:"-1px"}}>Ringkasan Omzet Luar Negeri</h1>
               <p className="textP" style={{fontWeight:"500"}}>Periode 1 Oktober 2022 - 31 Oktober 2022</p>
             </div>
 
               <div style={{
                 display:"flex",
-                alignItems: "center",
-                background:"red",
-                gap:"1.2rem"
+                alignItems: "start",
+                gap:"1.2rem",
               }} >
                 <div
                     className=""
@@ -62,7 +60,7 @@ const OmzetLuarNegri = () => {
                     <h4 style={{
                         textAlign: "center",
                         alignItems:"center",
-                    }} className="textChoose shadowElement">
+                    }} className="textChoose shadowElement shadow">
                         Filter Transaksi
                         <AiOutlineRight style={{
                             marginLeft: "5px",
@@ -79,7 +77,7 @@ const OmzetLuarNegri = () => {
                 >
                     <h4 style={{
                         textAlign: "center",
-                    }} className=" shadowElement textChoose textChooseColor" >
+                    }} className=" shadowElement textChoose textChooseColor shadow" >
                         Pilih Cabang
                         <BsChevronExpand style={{
                             marginLeft: "5px",
@@ -96,7 +94,7 @@ const OmzetLuarNegri = () => {
                 >
                     <h4 style={{
                         
-                    }} className=" shadowElement textChoose textChooseColor py-2">
+                    }} className=" shadowElement textChoose textChooseColor shadow">
                         Pilih Bulan
                         <BsChevronExpand style={{
                             marginLeft: "5px",
@@ -105,7 +103,7 @@ const OmzetLuarNegri = () => {
                     </h4>
                 </div>
 
-                <Button onClick={() => setModalShow(true)} variant='danger'>Reset Filter</Button>
+                <Button onClick={() => setModalShow(true)} size="md" className='shadow' variant='danger'>Reset Filter</Button>
                 <TambahTransaksi 
                   show={modalShow}
                   onHide={() => setModalShow(false)}

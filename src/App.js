@@ -19,7 +19,7 @@ import {
 function App() {
   return (
     <Routes>
-      <Route path="/auth" element={<Auth />} />
+      <Route path="/login" element={<Auth />} />
 
       <Route
         path="/"
@@ -94,7 +94,7 @@ function App() {
         }
       />
       <Route
-        path="/scan-barcode"
+        path="/luar-negeri/scan-barcode"
         element={
           <Layout>
             <ScanBarcode />

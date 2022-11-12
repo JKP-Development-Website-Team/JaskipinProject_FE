@@ -11,21 +11,17 @@ function NavbarAdmin() {
   const animated = useSelector((state) => state.animasiSlice.value);
   const dispatch = useDispatch();
   return (
-    <div
-      style={{
-        // height:"80px",
-        background: "red",
-      }}
-    >
       <Navbar
         collapseOnSelect
         expand="lg"
         className="mt-3 rounded-4 border bg-light"
+        sticky="top"
         style={{
           zIndex: "999",
-          position: "fixed",
+          // position: "fixed",
           right: "30px",
           left: "30px",
+          margin:"10px 20px",
           border: "none",
         }}
       >
@@ -113,7 +109,6 @@ function NavbarAdmin() {
           </Navbar.Collapse>
         </>
       </Navbar>
-    </div>
   );
 }
 

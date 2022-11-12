@@ -1,8 +1,44 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Badge, Button } from "react-bootstrap";
 
 const ScanBarcodeComponent = () => {
   const datas = [
+    {
+      no_order: "JEX000000888",
+      no_resi: "JEX000000888",
+      status_order: "Manifest",
+      nama_penerima: "Karen Novi",
+      nama_pengirim: "Gilang Saputra",
+      mitra_expedisi: "Aramex",
+      negara_tujuan: "Australia",
+    },
+    {
+      no_order: "JEX000000888",
+      no_resi: "JEX000000888",
+      status_order: "Manifest",
+      nama_penerima: "Karen Novi",
+      nama_pengirim: "Gilang Saputra",
+      mitra_expedisi: "Aramex",
+      negara_tujuan: "Australia",
+    },
+    {
+      no_order: "JEX000000888",
+      no_resi: "JEX000000888",
+      status_order: "Manifest",
+      nama_penerima: "Karen Novi",
+      nama_pengirim: "Gilang Saputra",
+      mitra_expedisi: "Aramex",
+      negara_tujuan: "Australia",
+    },
+    {
+      no_order: "JEX000000888",
+      no_resi: "JEX000000888",
+      status_order: "Manifest",
+      nama_penerima: "Karen Novi",
+      nama_pengirim: "Gilang Saputra",
+      mitra_expedisi: "Aramex",
+      negara_tujuan: "Australia",
+    },
     {
       no_order: "JEX000000888",
       no_resi: "JEX000000888",
@@ -57,7 +93,15 @@ const ScanBarcodeComponent = () => {
               <td className="text-field-table">{data.no_order}</td>
               <td className="text-field-table">{data.no_resi}</td>
               <td>
-                <div className="div-button">{data.status_order}</div>
+                <h5>
+                  <Badge
+                    style={{
+                      backgroundColor: "#70B5F4",
+                    }}
+                  >
+                    {data.status_order}
+                  </Badge>
+                </h5>
               </td>
               <td className="text-field-lainnya">{data.nama_penerima}</td>
               <td className="text-field-lainnya">{data.nama_pengirim}</td>

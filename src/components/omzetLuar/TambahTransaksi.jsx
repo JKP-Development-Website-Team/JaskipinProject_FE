@@ -6,11 +6,12 @@ const TambahTransaksi = (props) => {
   return (
     <Modal
       {...props}
-      size="lg"
       aria-labelledby="contained-modal-title-vcenter"
-    //   centered   
+      // dialogClassName="modal-90w"
+      className="w-full"
+      size="xl"
     >
-      <Modal.Header closeButton className="sticky-top border-2 bg-body w-100" >
+      <Modal.Header closeButton className="sticky-top border-2 bg-body w-100">
         
         <Modal.Title
           style={{
@@ -34,7 +35,7 @@ const TambahTransaksi = (props) => {
           </span>
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
+      <Modal.Body >
       
         {/* Component Form  */}
         <TransaksiLuarForm />
