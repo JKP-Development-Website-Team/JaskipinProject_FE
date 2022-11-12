@@ -12,8 +12,10 @@ import union2 from "../../Image/Union (2).png";
 import DropdownDomestik from "../../components/Domestik/DropDownDomestik";
 import TabelDomestik from "../../components/tabel/TabelDomestik";
 import { useSelector } from "react-redux";
+import TambahTransaksiDomestikForm from "../../components/Domestik/TambahTransaksiDomestikForm";
 
 const Domestik = () => {
+  const [modalShow, setModalShow] = React.useState(false);
   const animated = useSelector((state) => state.animasiSlice.value);
   return (
     <>
@@ -75,19 +77,25 @@ const Domestik = () => {
                         />
                       </InputGroup>
                     </div>
-                      <DropdownDomestik />
+                    <DropdownDomestik />
                   </div>
                   <div className="d-flex flex-row-reverse">
                     <div>
                       <Button
                         style={{ backgroundColor: "#0843AD", border: "none" }}
                         className=""
+                        onClick={() => setModalShow(true)}
                       >
                         <img src={union2} alt="" className="me-1 mb-1" />
                         Tambah Transaksi
                       </Button>{" "}
                     </div>
                   </div>
+
+                  <TambahTransaksiDomestikForm
+                    show={modalShow}
+                    onHide={() => setModalShow(false)}
+                  />
                 </div>
 
                 <TabelDomestik />
