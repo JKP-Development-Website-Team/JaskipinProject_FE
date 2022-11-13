@@ -18,9 +18,6 @@ function NavbarAdmin() {
         sticky="top"
         style={{
           zIndex: "999",
-          // position: "fixed",
-          right: "30px",
-          left: "30px",
           margin:"10px 20px",
           border: "none",
         }}
@@ -30,7 +27,7 @@ function NavbarAdmin() {
             className="ms-5"
             style={{
               borderRight: "3px solid #9D9C9C",
-              paddingRight: animated ? "3rem" : "2.1rem",
+              paddingRight: animated ? "3.8rem" : "2.9rem",
               transition: "0.5s",
             }}
           >

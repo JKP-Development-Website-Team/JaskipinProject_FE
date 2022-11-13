@@ -28,11 +28,11 @@ export const categories = [
         name:"Calon Agen", icon: calonAgen, children: [
         {
             nameChil:"Agen",
-            chilLink:"/calon-agen"
+            chilLink:"/calon-agen/agen"
         },
         {
             nameChil:"Member",
-            chilLink:"/member"
+            chilLink:"/calon-agen/member"
         }
 
         ]

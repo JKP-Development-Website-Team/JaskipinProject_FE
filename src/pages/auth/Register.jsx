@@ -8,7 +8,7 @@ import {useDispatch,} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
 
 
-const Auth = () => {
+const Register = () => {
 
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -138,4 +138,4 @@ const Auth = () => {
   );
 };
 
-export default Auth;
+export default Register;
