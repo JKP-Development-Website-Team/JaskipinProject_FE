@@ -10,7 +10,7 @@ import {
   CalonAgen,
   Member,
   BookingPage,
-  Auth,
+  Login,
   TransaksiLuarNegeri,
   Tracking,
   Domestik,
@@ -48,7 +48,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/login" element={<Auth />} />
+      <Route path="/login" element={<Login />} />
 
       <Route
         path="/dashboard/omzet-luar-negri"
