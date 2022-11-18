@@ -9,7 +9,7 @@ table {
   }
   
 th, td {
-    padding: 10px 1.5em;
+    padding: 15px 1.5em;
     border-bottom: 2px solid white; 
     font-size: 14px;
     font-weight: normal;
@@ -314,3 +314,7 @@ box-shadow:
 }
 
 /* Scan Barcode table  */
+
+/* Button Detail */
+
+/* AKhir Button Detail */

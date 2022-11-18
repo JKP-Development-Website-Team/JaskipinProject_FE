@@ -2,16 +2,21 @@ import React, { useState, useEffect } from "react";
 import FormAuth from "../../components/form/FormAuth";
 import Maskot from "../../Image/maskot-ilustrasi.png";
 import JaskipinLogo from "../../Image/JaskipinLogo.png";
-import { loginAuth } from "../../redux/auth/AuthSlice";
 
-import {useDispatch,} from 'react-redux'
+import {useDispatch, useSelector,} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
+import { clearMessage } from "../../redux/auth/AuthMessage";
+import { login } from "../../redux/auth/AuthSlice";
+// import { loginAuth } from "../../redux/auth/AuthSlice";
 
 
 const Login = () => {
 
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  const {isLoggedIn} = useSelector(state => state.auth);
+  const {message} = useSelector(state => state.message);
+
 
   const [form, setForm] = useState({
     isAuth:true,
@@ -28,20 +33,20 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     try {
+      const {email, password} = form
       e.preventDefault()
-      dispatch(loginAuth(form))
-
-      alert("semangat kerjanya")
-      
-      setTimeout(() => {
-        navigate('/')
-      }, 500)
+      dispatch(login({email, password})).then(() => {
+        navigate('/dashboard')
+      })
     } catch (error) {
       alert(error)
       console.log(error)
     }
   }
 
+  useEffect(() => {
+    dispatch(clearMessage())
+  }, [dispatch])
 
   return (
     <div

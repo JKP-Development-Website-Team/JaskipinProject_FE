@@ -86,7 +86,18 @@ export const categories = [
         ]
     },
     {name:"Pengaturan", icon: pengaturan, children: [
-
+            {
+                nameChil:"Master Data",
+                chilLink:"/pengaturan/master-data"
+            },
+            {
+                nameChil:"Office Parameter",
+                chilLink:"/pengaturan/office-parameter"
+            },
+            {
+                nameChil:"Pengaturan System",
+                chilLink:"/pengaturan/pengaturan-system"
+            }
         ]
     },
     {name:"laporan Agen", icon: laporanAgen, children: [

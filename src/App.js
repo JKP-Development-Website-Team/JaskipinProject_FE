@@ -40,7 +40,7 @@ function App() {
     return <Navigate to="" />;
   }
   if (pathname === "/pengaturan") {
-    return <Navigate to="" />;
+    return <Navigate to="/pengaturan/master-data" />;
   }
   if (pathname === "/laporan-agen") {
     return <Navigate to="" />;
@@ -50,6 +50,7 @@ function App() {
     <Routes>
       <Route path="/login" element={<Login />} />
 
+      {/* Dashboard */}
       <Route
         path="/dashboard/omzet-luar-negri"
         element={
@@ -59,19 +60,12 @@ function App() {
         }
       />
 
+      {/* Calon Agen */}
       <Route
         path="/calon-agen/agen"
         element={
           <Layout>
             <CalonAgen />
-          </Layout>
-        }
-      />
-      <Route
-        path="/luar-negeri/tarif"
-        element={
-          <Layout>
-            <Tarif />
           </Layout>
         }
       />
@@ -84,6 +78,17 @@ function App() {
           </Layout>
         }
       />
+
+      {/* Luar Negeri */}
+      <Route
+        path="/luar-negeri/tarif"
+        element={
+          <Layout>
+            <Tarif />
+          </Layout>
+        }
+      />
+
       <Route
         path="/luar-negeri/tracking"
         element={
