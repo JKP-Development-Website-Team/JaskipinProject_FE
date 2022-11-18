@@ -11,11 +11,7 @@ function TambahTransaksiDomestikForm(props) {
       className="rounded-5"
       closeButton
     >
-<<<<<<< HEAD
-      <Modal.Header className="sticky-top bg-white border-2 bg-body w-100" closeButton>
-=======
       <Modal.Header className="sticky-top border-2 bg-body w-100" closeButton>
->>>>>>> d4e450d46213f8741e3a5eb77679dc2f6ea06c88
         <div className="p-3">
           <p
             id="contained-modal-title-vcenter"

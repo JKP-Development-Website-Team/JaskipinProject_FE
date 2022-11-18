@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Container, Row, InputGroup, Form, Button } from "react-bootstrap";
-// import TabelCalonAgen from "../../../components/tabel/TabelCalonAgen";
-// import Sidebar from "../../../components/sidebar/Sidebar";
 import { BiSearch } from "react-icons/bi";
 import NavbarAdmin from "../../../components/navbar/NavbarAdmin";
 import SidebarDua from "../../../components/sidebar/SidebarDua";

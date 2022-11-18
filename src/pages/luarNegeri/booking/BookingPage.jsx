@@ -3,8 +3,6 @@ import React, {useState} from 'react'
 import { Container, Form, InputGroup, Row , Dropdown, DropdownButton} from 'react-bootstrap'
 import { BiSearch } from 'react-icons/bi'
 import BookingTable from '../../../components/bookingTable/BookingTable'
-import NavbarAdmin from '../../../components/navbar/NavbarAdmin'
-import SidebarDua from '../../../components/sidebar/SidebarDua'
 import { months } from '../../../components/utils/Constant'
 import { useSelector } from 'react-redux'
 

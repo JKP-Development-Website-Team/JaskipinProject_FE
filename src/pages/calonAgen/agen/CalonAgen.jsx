@@ -8,7 +8,50 @@ import SidebarDua from "../../../components/sidebar/SidebarDua";
 import { useSelector } from "react-redux";
 
 const CalonAgen = () => {
-  const animated = useSelector(state => state.animasiSlice.value)
+  const animated = useSelector(state => state.animasiSlice.value);
+
+  const valueTable = [
+    {
+      id:"1",
+      status: "Aktif",
+      nama:"John Doe",
+      email:"Johndoe@gmail.com",
+      alamat:"Jl. Siliwangi",
+      noHp:"0896 xxxx xxxx",
+      kota:"Cirebon",
+      tanggal:"2 Januari 2022"
+    },
+    {
+      id:"2",
+      status: "Aktif",
+      nama:"John Doe",
+      email:"Johndoe@gmail.com",
+      alamat:"Jl. Siliwangi",
+      noHp:"0896 xxxx xxxx",
+      kota:"Cirebon",
+      tanggal:"2 Januari 2022"
+    },
+    {
+      id:"3",
+      status: "Aktif",
+      nama:"John Doe",
+      email:"Johndoe@gmail.com",
+      alamat:"Jl. Siliwangi",
+      noHp:"0896 xxxx xxxx",
+      kota:"Cirebon",
+      tanggal:"2 Januari 2022"
+    },
+    {
+      id:"4",
+      status: "Aktif",
+      nama:"John Doe",
+      email:"Johndoe@gmail.com",
+      alamat:"Jl. Siliwangi",
+      noHp:"0896 xxxx xxxx",
+      kota:"Cirebon",
+      tanggal:"2 Januari 2022"
+    },  
+  ]
   return (
     <>
     <div>
@@ -57,7 +100,7 @@ const CalonAgen = () => {
                 </div>
 
               </div>
-              <TabelCalonAgen />
+              <TabelCalonAgen valueTable={valueTable} />
               {/* Batas Animasi */}
             </div>
           </Row>

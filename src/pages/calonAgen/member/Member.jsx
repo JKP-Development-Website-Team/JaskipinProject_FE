@@ -6,11 +6,55 @@ import {AiOutlinePlus} from "react-icons/ai"
 import SidebarDua from "../../../components/sidebar/SidebarDua";
 import Union from '../../../Image/Union.png'
 import TabelMember from '../../../components/tabel/TabelMember';
+import TabelCalonAgen from '../../../components/tabel/TabelCalonAgen';
 
 
 const Member = () => {
 
     const [animated, setAnimated] = useState(false)
+
+    const valueTable = [
+      {
+        id:"1",
+        status: "Aktif",
+        nama:"John Doe",
+        email:"Johndoe@gmail.com",
+        alamat:"Jl. Siliwangi",
+        noHp:"0896 xxxx xxxx",
+        kota:"Cirebon",
+        tanggal:"2 Januari 2022"
+      },
+      {
+        id:"2",
+        status: "Aktif",
+        nama:"John Doe",
+        email:"Johndoe@gmail.com",
+        alamat:"Jl. Siliwangi",
+        noHp:"0896 xxxx xxxx",
+        kota:"Cirebon",
+        tanggal:"2 Januari 2022"
+      },
+      {
+        id:"3",
+        status: "Aktif",
+        nama:"John Doe",
+        email:"Johndoe@gmail.com",
+        alamat:"Jl. Siliwangi",
+        noHp:"0896 xxxx xxxx",
+        kota:"Cirebon",
+        tanggal:"2 Januari 2022"
+      },
+      {
+        id:"4",
+        status: "Aktif",
+        nama:"John Doe",
+        email:"Johndoe@gmail.com",
+        alamat:"Jl. Siliwangi",
+        noHp:"0896 xxxx xxxx",
+        kota:"Cirebon",
+        tanggal:"2 Januari 2022"
+      },  
+    ]
 
   return (
     <div>
@@ -60,7 +104,9 @@ const Member = () => {
                 </div>
 
               </div>
-              <TabelMember />
+              <TabelCalonAgen  
+               valueTable={valueTable}
+              />
               {/* Batas Animasi */}
             </div>
           </Row>
