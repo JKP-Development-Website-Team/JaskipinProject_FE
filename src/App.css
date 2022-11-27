@@ -22,6 +22,14 @@ th {
     background-color: #f3f3f3;
 }
 
+.statusAktif {
+  color: #0843AD
+}
+
+.statusNon {
+  color: #F61031;
+}
+
 
 /* Omzet Luar Negri Section */
 .textHead{
