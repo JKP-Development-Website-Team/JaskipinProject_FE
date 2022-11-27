@@ -1,16 +1,26 @@
 import React, { useState } from "react";
-import { Container, Row, InputGroup, Form } from "react-bootstrap";
+import { Container, Row, InputGroup, Form, Button } from "react-bootstrap";
 import TabelCalonAgen from "../../../components/tabel/TabelCalonAgen";
-import NavbarAdmin from "../../../components/navbar/NavbarAdmin";
-import Sidebar from "../../../components/sidebar/Sidebar";
-import { BiSearch } from "react-icons/bi";
-import SidebarDua from "../../../components/sidebar/SidebarDua";
+import { BiSearch, BiTrash } from "react-icons/bi";
 import { useSelector } from "react-redux";
+import { BsPencilSquare, BsThreeDotsVertical } from "react-icons/bs";
+import { CgUserList } from "react-icons/cg";
 
 const CalonAgen = () => {
   const animated = useSelector(state => state.animasiSlice.value);
+  const [isDetailIcon, setIsDetailIcon] = useState("")
 
-  const valueTable = [
+  const columns = [
+    {fieldStatus:"status", header:"Status"},
+    {field:"nama", header:"Nama"},
+    {field:"email", header:"Email"},
+    {field:"alamat", header:"Alamat"},
+    {field:"noHp", header:"No. Hp"},
+    {field:"kota", header:"Kota"},
+    {field:"tanggal", header:"Tanggal"}
+  ]
+
+  const dataTable = [
     {
       id:"1",
       status: "Aktif",
@@ -23,7 +33,7 @@ const CalonAgen = () => {
     },
     {
       id:"2",
-      status: "Aktif",
+      status: "Non Aktif",
       nama:"John Doe",
       email:"Johndoe@gmail.com",
       alamat:"Jl. Siliwangi",
@@ -52,6 +62,81 @@ const CalonAgen = () => {
       tanggal:"2 Januari 2022"
     },  
   ]
+
+  const colSpan = {
+    colOne: 5,
+    colTwo: 2,
+  };
+
+  const actionIcon = (id) => (
+    <span
+      style={{
+        position: "relative",
+      }}
+    >
+      <BsThreeDotsVertical
+        style={{
+          cursor: "pointer",
+          color: "#828181",
+          fontSize: "1.5em",
+          marginLeft: "10px",
+        }}
+        onClick={() => setIsDetailIcon(id)}
+      />{" "}
+      <span
+        style={{
+          position: "absolute",
+          height: "50px",
+          marginTop: "-40px",
+          left: "10px",
+          width: "21rem",
+          overflow: "hidden",
+          background: "#fff",
+          display: isDetailIcon === id ? "flex" : "none",
+          alignItems: "center",
+          justifyContent: "space-evenly",
+        }}
+        onMouseLeave={() => setIsDetailIcon("")}
+        className="shadow rounded"
+      >
+        <Button
+          size="sm"
+          style={{
+            background: "#9D9C9C",
+            border: "none",
+          }}
+          className="shadow"
+        >
+          {" "}
+          <BsPencilSquare /> Ubah
+        </Button>
+        <Button
+          size="sm"
+          style={{
+            background: "#9D9C9C",
+            border: "none",
+          }}
+          className="shadow"
+        >
+          {" "}
+          <CgUserList /> Detail
+        </Button>
+        <Button
+          size="sm"
+          style={{
+            // background: "#9D9C9C",
+            border: "none",
+          }}
+          className="shadow"
+          variant="danger"
+        >
+          {" "}
+          <BiTrash /> Hapus
+        </Button>
+      </span>{" "}
+    </span>
+  );
+
   return (
     <>
     <div>
@@ -100,7 +185,12 @@ const CalonAgen = () => {
                 </div>
 
               </div>
-              <TabelCalonAgen valueTable={valueTable} />
+              <TabelCalonAgen                
+               columns={columns}
+                dataTable={dataTable}
+                colSpan={colSpan}
+                actionIcon={actionIcon}
+                />
               {/* Batas Animasi */}
             </div>
           </Row>
