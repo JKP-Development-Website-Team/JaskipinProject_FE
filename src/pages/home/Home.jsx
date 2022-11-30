@@ -6,8 +6,6 @@ import SidebarDua from '../../components/sidebar/SidebarDua'
 
 const Home = () => {
   
-  const [animated, setAnimated] = useState(false)
-  console.log(animated)
   return (
     <Container >
       {/* <NavbarAdmin animated={animated} /> */}
