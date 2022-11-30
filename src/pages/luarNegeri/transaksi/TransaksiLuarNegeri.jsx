@@ -1,16 +1,14 @@
-import React, { useState } from "react";
-import { Container, Row, InputGroup, Form, Button } from "react-bootstrap";
+import React from "react";
+import { InputGroup, Form, Button } from "react-bootstrap";
 import { BiSearch } from "react-icons/bi";
-import NavbarAdmin from "../../../components/navbar/NavbarAdmin";
-import SidebarDua from "../../../components/sidebar/SidebarDua";
 import TabelLuarNegeri from "../../../components/tabel/TabelLuarNegeri";
 import union from "../../../Image/Union.png";
 import union2 from "../../../Image/Union (2).png";
 import DropdownLuarNegeri from "../../../components/LuarNegeri/DropDownLuarNegeri";
 import { useSelector } from "react-redux";
+import ContainerMain from "../../../components/containerMain/ContainerMain";
 
 const TransaksiLuarNegeri = () => {
-    const animated = useSelector(state => state.animasiSlice.value)
 
   return (
     <div>
@@ -20,19 +18,7 @@ const TransaksiLuarNegeri = () => {
           minHeight: "100vh",
         }}
       >
-        <Container>
-          <Row className="">
-            <div
-              className="ps-3 "
-              style={{
-                background: "",
-                width: animated ? "85%" : "75%",
-                position: "absolute",
-                transition: "0.5s",
-                left: animated ? "200px" : "320px",
-                top: "125px",
-              }}
-            >
+        <ContainerMain>
               {/* Batas Animasi*/}
               <div
                 style={{
@@ -148,9 +134,7 @@ const TransaksiLuarNegeri = () => {
 
               <TabelLuarNegeri />
               {/* Batas Animasi */}
-            </div>
-          </Row>
-        </Container>
+              </ContainerMain>
       </div>
     </div>
   );
