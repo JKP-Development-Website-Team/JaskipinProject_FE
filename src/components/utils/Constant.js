@@ -12,7 +12,7 @@ export const categories = [
         name:"Dashboard", icon: dashboardLogo,children: [
             {
                 nameChil:"Omzet Luar Negeri",
-                chilLink:"/omzet-luar-negri"
+                chilLink:"/dashboard/omzet-luar-negri"
             },
             {
                 nameChil:"Omzet Domestik",
@@ -28,11 +28,11 @@ export const categories = [
         name:"Calon Agen", icon: calonAgen, children: [
         {
             nameChil:"Agen",
-            chilLink:"/calon-agen"
+            chilLink:"/calon-agen/agen"
         },
         {
             nameChil:"Member",
-            chilLink:"/member"
+            chilLink:"/calon-agen/member"
         }
 
         ]
@@ -41,15 +41,15 @@ export const categories = [
         name:"Luar Negeri", icon: domestik, children: [
             {
                 nameChil:"Transaksi",
-                chilLink:"/transaksi"
+                chilLink:"/luar-negeri/transaksi"
             },
             {
                 nameChil:"Tarif",
-                chilLink:"/tarif"
+                chilLink:"/luar-negeri/tarif"
             },
             {
                 nameChil:"Booking",
-                chilLink:"/luar-negeri/transaksi-domestik"
+                chilLink:"/luar-negeri/booking"
             },
             {
                 nameChil:"Request AWB",
@@ -57,11 +57,11 @@ export const categories = [
             },
             {
                 nameChil:"Scan Barcode",
-                chilLink:"/scan-barcode"
+                chilLink:"/luar-negeri/scan-barcode"
             },
             {
                 nameChil:"Tracking",
-                chilLink:"/tracking"
+                chilLink:"/luar-negeri/tracking"
             }
 
         ]
@@ -69,7 +69,7 @@ export const categories = [
     {name:"Domestik", icon: laporan, children: [
             {
                 nameChil:"Transaksi",
-                chilLink:"/transaksi-domestik"
+                chilLink:"/domestik/transaksi-domestik"
             },
             {
                 nameChil:"Booking",
@@ -85,8 +85,19 @@ export const categories = [
 
         ]
     },
-    {name:"Pengaturan", icon: pengaturan, children: [
-
+    {name:"Pengaturan", icon: pengaturan, link: '/pengaturan',children: [
+            {
+                nameChil:"Master Data",
+                chilLink:"/pengaturan/master-data"
+            },
+            {
+                nameChil:"Office Parameter",
+                chilLink:"/pengaturan/office-parameter"
+            },
+            {
+                nameChil:"Pengaturan System",
+                chilLink:"/pengaturan/pengaturan-system"
+            }
         ]
     },
     {name:"laporan Agen", icon: laporanAgen, children: [
@@ -110,40 +121,3 @@ export const months = [
     "November",
     "Desember"
 ]
-
-
-// export const categories = [
-//     {
-//         name:"Dashboard", icon: dashboardLogo,children: {
-//         chilOne: "Omzet Luar Negeri",
-//         chilTwo:"Omzet Domestik",
-//         chilThree:"Pengguna Baru",
-//         }
-//     },
-//     {name:"Calon Agen", icon: calonAgen, children: [
-//             {
-//                 nameChil:"Agen",
-//                 linkChil:"/calon-agen"
-//             },
-//             {
-//                 nameChil
-//             }
-//     ]},
-//     {name:"Luar Negeri", icon: domestik, children: {
-//         chilOne:"Transaksi",
-//         chilTwo:"Tarif",
-//         chilThree:"Booking",
-//         chilFour:"Request AWB",
-//         chilFive:"Scan Barcode",
-//         chilSix:"Tracking"
-//     }},
-//     {name:"Domestik", icon: laporan, children:{
-//         chilOne:"Transaksi",
-//         chilTwo:"Booking"
-//     }},
-//     {name:"Keuangan", icon: laporanAgen,},
-//     {name:"Laporan", icon: luarNegeri,},
-//     {name:"Pengaturan", icon: pengaturan,},
-//     {name:"laporan Agen", icon: laporanAgen,},
-    
-// ]

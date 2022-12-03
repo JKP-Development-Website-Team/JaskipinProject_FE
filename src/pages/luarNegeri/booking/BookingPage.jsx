@@ -3,35 +3,21 @@ import React, {useState} from 'react'
 import { Container, Form, InputGroup, Row , Dropdown, DropdownButton} from 'react-bootstrap'
 import { BiSearch } from 'react-icons/bi'
 import BookingTable from '../../../components/bookingTable/BookingTable'
-import NavbarAdmin from '../../../components/navbar/NavbarAdmin'
-import SidebarDua from '../../../components/sidebar/SidebarDua'
 import { months } from '../../../components/utils/Constant'
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
+import ContainerMain from '../../../components/containerMain/ContainerMain'
 
 const BookingPage = () => {
-  const animated = useSelector(state => state.animasiSlice.value)
 
   return (
     <div>
-            <div
-        style={{
-          backgroundColor: "#D9D9D9",
-          minHeight: "100%",
-        }}
-      >
-        <NavbarAdmin animated={animated} />
-        <Container>
-          <Row className=''>
-            <div style={{ background: "salmon" }}>
-            </div>
-            <div className="ps-3 " style={{
-              background: "",
-              width: animated ? "85%" : "75%",
-              position: "absolute",
-              transition: "0.5s",
-              left: animated ? "200px" : "320px",
-              top: "125px"
-            }}>
+    <div
+      style={{
+        backgroundColor: "#D9D9D9",
+        minHeight: "100vh",
+      }}
+    >
+        <ContainerMain>
               {/* Batas Animasi*/}
             <div
                 style={{
@@ -78,11 +64,9 @@ const BookingPage = () => {
               <BookingTable />
               {/* Component */}
               {/* Batas Animasi */}
-            </div>
-          </Row>
-        </Container>
-      </div> 
-    </div>
+              </ContainerMain>
+              </div>
+              </div>
   )
 }
 

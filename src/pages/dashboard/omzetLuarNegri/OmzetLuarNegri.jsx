@@ -1,130 +1,145 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect } from "react";
 import { Container, Row, Button } from "react-bootstrap";
 import NavbarAdmin from "../../../components/navbar/NavbarAdmin";
 // import Sidebar from "../../../components/sidebar/Sidebar";
 
-import {AiOutlineRight} from 'react-icons/ai'
-import {BsChevronExpand} from 'react-icons/bs'
-import CompHead from '../../../components/omzetLuar/CompHead';
-import SidebarDua from '../../../components/sidebar/SidebarDua';
-import TambahTransaksi from '../../../components/omzetLuar/TambahTransaksi';
+import { AiOutlineRight } from "react-icons/ai";
+import { BsChevronExpand } from "react-icons/bs";
+import CompHead from "../../../components/omzetLuar/CompHead";
+import SidebarDua from "../../../components/sidebar/SidebarDua";
+import TambahTransaksi from "../../../components/omzetLuar/TambahTransaksi";
+import { useSelector } from "react-redux";
+import ContainerMain from "../../../components/containerMain/ContainerMain";
 
 const OmzetLuarNegri = () => {
   const [modalShow, setModalShow] = React.useState(false);
-  const [animated, setAnimated] = useState(false);
+  const animated = useSelector((state) => state.animasiSlice.value);
 
   return (
-    <div
-    style={{
-      backgroundColor: "#D9D9D9",
-      minHeight: "200vh",
-    }}
-  >
-    <NavbarAdmin animated={animated} />
-    <Container>
-      <Row className=''>
-        <div style={{background:"salmon"}}>
-          <SidebarDua animated={animated} setAnimated={setAnimated} />          
-        </div>
-        <div className="ps-3 " style={{
-          background:"",
-          width: animated ? "85%" : "77%",
-          position:"absolute",
-          transition:"0.5s",
-          left: animated ? "200px" : "300px",
-          top:"125px"
-        }}>
+    <div>
+      <div
+        style={{
+          backgroundColor: "#D9D9D9",
+          minHeight: "100vh",
+        }}
+      >
+        <ContainerMain>
           {/* Batas Animasi */}
-        <div
+          <div
             style={{
-              display:"flex",
-              justifyContent:"space-between",
-              alignItems:"center"
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
             }}
           >
-            <div className="py-2 bg-danger">
-              <h1 className="textHead" style={{fontSize:"20px", marginBottom:"-1px"}}>Ringkasan Omzet Luar Negeri</h1>
-              <p className="textP" style={{fontWeight:"500"}}>Periode 1 Oktober 2022 - 31 Oktober 2022</p>
+            <div className="py-2">
+              <h1
+                className="textHead"
+                style={{ fontSize: "20px", marginBottom: "-1px" }}
+              >
+                Ringkasan Omzet Luar Negeri
+              </h1>
+              <p className="textP" style={{ fontWeight: "500" }}>
+                Periode 1 Oktober 2022 - 31 Oktober 2022
+              </p>
             </div>
 
-              <div style={{
-                display:"flex",
-                alignItems: "center",
-                background:"red",
-                gap:"1.2rem"
-              }} >
-                <div
-                    className=""
-                    style={{
-                      cursor: "pointer"
-                    }}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "start",
+                gap: "1.2rem",
+              }}
+            >
+              <div
+                className=""
+                style={{
+                  cursor: "pointer",
+                }}
+              >
+                <h4
+                  style={{
+                    textAlign: "center",
+                    alignItems: "center",
+                  }}
+                  className="textChoose shadowElement shadow"
                 >
-                    <h4 style={{
-                        textAlign: "center",
-                        alignItems:"center",
-                    }} className="textChoose shadowElement">
-                        Filter Transaksi
-                        <AiOutlineRight style={{
-                            marginLeft: "5px",
-                            alignItems: "center"
-                        }} />
-                    </h4>
-                </div>
-
-                <div
-                    className=""
+                  Filter Transaksi
+                  <AiOutlineRight
                     style={{
-                      cursor: "pointer"
+                      marginLeft: "5px",
+                      alignItems: "center",
                     }}
-                >
-                    <h4 style={{
-                        textAlign: "center",
-                    }} className=" shadowElement textChoose textChooseColor" >
-                        Pilih Cabang
-                        <BsChevronExpand style={{
-                            marginLeft: "5px",
-                            alignItems: "center"
-                        }} />
-                    </h4>
-                </div>
-                
-                <div
-                    className=""
-                    style={{
-                      cursor: "pointer",
-                    }}
-                >
-                    <h4 style={{
-                        
-                    }} className=" shadowElement textChoose textChooseColor py-2">
-                        Pilih Bulan
-                        <BsChevronExpand style={{
-                            marginLeft: "5px",
-                            alignItems: "center"
-                        }} />
-                    </h4>
-                </div>
-
-                <Button onClick={() => setModalShow(true)} variant='danger'>Reset Filter</Button>
-                <TambahTransaksi 
-                  show={modalShow}
-                  onHide={() => setModalShow(false)}
-                />
-
+                  />
+                </h4>
               </div>
-            
-        </div>
+
+              <div
+                className=""
+                style={{
+                  cursor: "pointer",
+                }}
+              >
+                <h4
+                  style={{
+                    textAlign: "center",
+                  }}
+                  className=" shadowElement textChoose textChooseColor shadow"
+                >
+                  Pilih Cabang
+                  <BsChevronExpand
+                    style={{
+                      marginLeft: "5px",
+                      alignItems: "center",
+                    }}
+                  />
+                </h4>
+              </div>
+
+              <div
+                className=""
+                style={{
+                  cursor: "pointer",
+                }}
+              >
+                <h4
+                  style={{}}
+                  className=" shadowElement textChoose textChooseColor shadow"
+                >
+                  Pilih Bulan
+                  <BsChevronExpand
+                    style={{
+                      marginLeft: "5px",
+                      alignItems: "center",
+                    }}
+                  />
+                </h4>
+              </div>
+
+              <Button
+                onClick={() => setModalShow(true)}
+                size="md"
+                className="shadow"
+                variant="danger"
+              >
+                Reset Filter
+              </Button>
+              <TambahTransaksi
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+              />
+            </div>
+          </div>
 
           {/* Components Here */}
           <CompHead />
           {/* Components Here */}
 
-        </div>
-        {/* Batas Animasi */}
-      </Row>
-    </Container>
-  </div>
-  )
-}
+          {/* Batas Animasi */}
+        </ContainerMain>
+      </div>
+    </div>
+  );
+};
 
-export default OmzetLuarNegri
+export default OmzetLuarNegri;

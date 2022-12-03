@@ -8,12 +8,13 @@ import {useDispatch,} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
 
 
-const Auth = () => {
+const Register = () => {
 
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
   const [form, setForm] = useState({
+    isAuth:true,
     email:"",
     password:""
   })
@@ -29,7 +30,12 @@ const Auth = () => {
     try {
       e.preventDefault()
       dispatch(loginAuth(form))
-      navigate('/')
+
+      alert("semangat kerjanya")
+      
+      setTimeout(() => {
+        navigate('/')
+      }, 500)
     } catch (error) {
       alert(error)
       console.log(error)
@@ -132,4 +138,4 @@ const Auth = () => {
   );
 };
 
-export default Auth;
+export default Register;

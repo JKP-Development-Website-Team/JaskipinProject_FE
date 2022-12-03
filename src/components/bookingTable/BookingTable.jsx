@@ -191,6 +191,36 @@ const BookingTable = () => {
                     </td>
                     </tr>
                     ))}
+
+<tr >
+            <td colSpan={6} style={{
+            padding:"1.7rem",
+            color:'#828181'
+          }}>Menampilkan 6 dari 24</td>
+            <td colSpan={2} style={{
+
+            }}>
+              <div style={{
+                display:"flex",
+                gap:"15px",
+                marginLeft:"-30px"
+             }}>
+              <Button variant="light" size="sm" style={{border:"2px solid #828181", color:"#828181", fontWeight:"500"}}>
+                Sebelumnya
+              </Button>
+            
+            
+              <Button
+                style={{ backgroundColor: "#0843AD", border: "none" }}
+                className="d-flex justify-content-center"
+                size="sm"
+              >
+                Selanjutnya
+              </Button>
+              </div>
+
+            </td>
+          </tr>
                     
                 </tbody>
         </table>

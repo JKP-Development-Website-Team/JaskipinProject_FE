@@ -43,22 +43,35 @@ function TabelLuarNegeri() {
           </tr>
           )
         })}
-        <tr>
-          <td>Menampilkan 6 dari 24</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td className="d-flex justify-content-center">
-            <Button variant="light" className="border border-dark" >Sebelumnya</Button>
-          </td>
-          <td>
-            <Button style={{ backgroundColor: '#0843AD', border: 'none' }} >Selanjutnya</Button>
-          </td>
+<tr >
+            <td colSpan={7} style={{
+            padding:"1.7rem",
+            color:'#828181'
+          }}>Menampilkan 6 dari 24</td>
+            <td colSpan={2} style={{
 
-        </tr>
+            }}>
+              <div style={{
+                display:"flex",
+                gap:"15px",
+                marginLeft:"-30px"
+             }}>
+              <Button variant="light" size="sm" style={{border:"2px solid #828181", color:"#828181", fontWeight:"500"}}>
+                Sebelumnya
+              </Button>
+            
+            
+              <Button
+                style={{ backgroundColor: "#0843AD", border: "none" }}
+                className="d-flex justify-content-center"
+                size="sm"
+              >
+                Selanjutnya
+              </Button>
+              </div>
+
+            </td>
+          </tr>
         </tbody>
           </table>
         </>
