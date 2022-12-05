@@ -17,6 +17,7 @@ import {
   ScanBarcode,
 } from "./pages";
 import { useEffect } from "react";
+import ChangePassword from "./pages/auth/ChangePassword";
 
 function App() {
   const { pathname } = useLocation();
@@ -49,7 +50,7 @@ function App() {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
-
+      <Route path="/change-password" element={<ChangePassword />}/>
       {/* Dashboard */}
       <Route
         path="/dashboard/omzet-luar-negri"

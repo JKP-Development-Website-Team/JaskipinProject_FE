@@ -5,11 +5,12 @@ import IconUnhiden from "../../Image/IconUnhiden.png"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const FormAuth = ({
+const FormChangePassword = ({
   handleChange,
   handleSubmit
 }) => {
     const [isVisible, setIsVisible] = useState("password")
+
     let navigate = useNavigate()
 
 
@@ -18,8 +19,25 @@ const FormAuth = ({
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Control
           type="email"
-          placeholder="Username/Email"
+          placeholder="Email"
           name="email"
+          style={{
+            borderRadius: "15px",
+            padding: "15px 3rem",
+            background: `url(${IconUsername}) 10px center no-repeat`,
+            color: "#828181 !important",
+            fontWeight: "600",
+            fontSize: "14px",
+            border: "2px solid #828181",
+          }}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicUserName">
+        <Form.Control
+          type="text"
+          placeholder="Username"
+          name="username"
           style={{
             borderRadius: "15px",
             padding: "15px 3rem",
@@ -35,7 +53,25 @@ const FormAuth = ({
       <Form.Group className="mb-3" controlId="formBasicPassword" style={{display:"flex", alignItems:"center"}}>
         <Form.Control
           type={isVisible}
-          placeholder="Password"
+          placeholder="Password Lama"
+          name='password'
+          style={{
+            borderRadius: "15px",
+            padding: "15px 3rem",
+            background: `url(${IconPassword}) 10px center no-repeat`,
+            color: "#828181 !important",
+            fontWeight: "600",
+            fontSize: "14px",
+            border: "2px solid #828181",
+          }}
+          onChange={handleChange}
+        />
+        <img src={IconUnhiden} alt="Unhidden" width={22} height={22} style={{marginLeft:"-40px", cursor:"pointer"}} onClick={() => setIsVisible(isVisible === "password" ? "text" : "password")}/>
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicPassword" style={{display:"flex", alignItems:"center"}}>
+        <Form.Control
+          type={isVisible}
+          placeholder="Password Baru"
           name='password'
           style={{
             borderRadius: "15px",
@@ -63,11 +99,11 @@ const FormAuth = ({
           fontSize: "14px",
         }}
       >
-        Masuk
+        Ubah Password
       </Button>
-      <p style={{fontWeight:"500", fontSize:"14px", marginTop:"1rem", textAlign:"right", color:"#5B93F9", cursor:"pointer"}} onClick={() => navigate('/change-password')}>Ubah Password</p>
+      <p style={{fontWeight:"500", fontSize:"14px", marginTop:"1rem", textAlign:"right", color:"#5B93F9", cursor:"pointer"}} onClick={() => navigate("/login")} >Login</p>
     </Form>
   );
 };
 
-export default FormAuth;
+export default FormChangePassword;
