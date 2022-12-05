@@ -13,8 +13,9 @@ import {
   Login,
   TransaksiLuarNegeri,
   Tracking,
-  Domestik,
+  DomestikTransaksi,
   ScanBarcode,
+  PengaturanHome
 } from "./pages";
 import { useEffect } from "react";
 import ChangePassword from "./pages/auth/ChangePassword";
@@ -39,9 +40,6 @@ function App() {
   }
   if (pathname === "/laporan") {
     return <Navigate to="" />;
-  }
-  if (pathname === "/pengaturan") {
-    return <Navigate to="/pengaturan/master-data" />;
   }
   if (pathname === "/laporan-agen") {
     return <Navigate to="" />;
@@ -114,14 +112,7 @@ function App() {
           </Layout>
         }
       />
-      <Route
-        path="/domestik/transaksi-domestik"
-        element={
-          <Layout>
-            <Domestik />
-          </Layout>
-        }
-      />
+
       <Route
         path="/luar-negeri/scan-barcode"
         element={
@@ -130,6 +121,26 @@ function App() {
           </Layout>
         }
       />
+
+      {/* Domestik */}
+      <Route
+        path="/domestik/transaksi-domestik"
+        element={
+          <Layout>
+            <DomestikTransaksi />
+          </Layout>
+        }
+      />
+
+      {/* Pengaturan */}
+        <Route 
+          path="/pengaturan"
+          element={
+            <Layout>
+              <PengaturanHome />
+            </Layout>
+          }
+        />
 
       <Route
         path="/"

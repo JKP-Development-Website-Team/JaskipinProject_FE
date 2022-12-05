@@ -5,6 +5,7 @@ import { BiSearch, BiTrash } from "react-icons/bi";
 import { useSelector } from "react-redux";
 import { BsPencilSquare, BsThreeDotsVertical } from "react-icons/bs";
 import { CgUserList } from "react-icons/cg";
+import ContainerMain from "../../../components/containerMain/ContainerMain";
 
 const CalonAgen = () => {
   const animated = useSelector(state => state.animasiSlice.value);
@@ -138,28 +139,7 @@ const CalonAgen = () => {
   );
 
   return (
-    <>
-    <div>
-            <div
-        style={{
-          backgroundColor: "#D9D9D9",
-          minHeight: "100vh",
-        }}
-      >
-        <Container>
-          <Row className=''>
-            <div style={{ background: "salmon" }}>
-              {/* <Sidebar animated={animated} setAnimated={setAnimated} /> */}
-              {/* <SidebarDua animated={animated} setAnimated={setAnimated}/> */}
-            </div>
-            <div className="ps-3 " style={{
-              background: "",
-              width: animated ? "85%" : "75%",
-              position: "absolute",
-              transition: "0.5s",
-              left: animated ? "200px" : "320px",
-              top: "125px"
-            }}>
+    <ContainerMain>
               {/* Batas Animasi*/}
             <div
                 style={{
@@ -192,12 +172,7 @@ const CalonAgen = () => {
                 actionIcon={actionIcon}
                 />
               {/* Batas Animasi */}
-            </div>
-          </Row>
-        </Container>
-      </div> 
-    </div>
-    </>
+    </ContainerMain>
   );
 };
 

@@ -1,43 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Row, InputGroup, Form, Button } from "react-bootstrap";
-// import TabelCalonAgen from "../../../components/tabel/TabelCalonAgen";
-// import Sidebar from "../../../components/sidebar/Sidebar";
 import { BiSearch } from "react-icons/bi";
-import ToastDropDown from "../../components/LuarNegeri/DropDownLuarNegeri";
-import NavbarAdmin from "../../components/navbar/NavbarAdmin";
-import SidebarDua from "../../components/sidebar/SidebarDua";
-import TabelLuarNegeri from "../../components/tabel/TabelLuarNegeri";
-import union from "../../Image/Union.png";
 import union2 from "../../Image/Union (2).png";
 import DropdownDomestik from "../../components/Domestik/DropDownDomestik";
 import TabelDomestik from "../../components/tabel/TabelDomestik";
 import { useSelector } from "react-redux";
 import TambahTransaksiDomestikForm from "../../components/Domestik/TambahTransaksiDomestikForm";
+import ContainerMain from "../../components/containerMain/ContainerMain";
 
-const Domestik = () => {
+const DomestikTransaksi = () => {
   const [modalShow, setModalShow] = React.useState(false);
-  const animated = useSelector((state) => state.animasiSlice.value);
+
   return (
-    <>
-      <div>
-        <div
-          style={{
-            height: "100vh",
-          }}
-        >
-          <Container>
-            <Row className="">
-              <div
-                className="ps-3 "
-                style={{
-                  background: "",
-                  width: animated ? "85%" : "75%",
-                  position: "absolute",
-                  transition: "0.5s",
-                  left: animated ? "200px" : "320px",
-                  top: "100px",
-                }}
-              >
+    <div>
+    <div
+      style={{
+        backgroundColor: "#D9D9D9",
+        minHeight: "100vh",
+      }}
+    >
+    <ContainerMain>
                 {/* Batas Animasi*/}
                 <div
                   style={{
@@ -100,13 +82,10 @@ const Domestik = () => {
 
                 <TabelDomestik />
                 {/* Batas Animasi */}
-              </div>
-            </Row>
-          </Container>
-        </div>
-      </div>
-    </>
+    </ContainerMain>
+    </div>
+    </div>
   );
 };
 
-export default Domestik;
+export default DomestikTransaksi;
