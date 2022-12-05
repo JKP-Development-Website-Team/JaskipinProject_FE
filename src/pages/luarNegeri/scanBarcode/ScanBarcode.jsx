@@ -19,7 +19,7 @@ const ScanBarcode = () => {
       <div
         style={{
           backgroundColor: "#D9D9D9",
-          minHeight: "100vh",
+          minHeight: "200vh",
         }}
       >
         <ContainerMain>

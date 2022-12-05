@@ -15,7 +15,8 @@ import {
   Tracking,
   DomestikTransaksi,
   ScanBarcode,
-  PengaturanHome
+  PengaturanHome,
+  DataPengguna
 } from "./pages";
 import { useEffect } from "react";
 
@@ -141,11 +142,29 @@ function App() {
           }
         />
 
+        <Route 
+          path="/pengaturan/master-data/data-pengguna"
+          element={
+            <Layout>
+              <DataPengguna />
+            </Layout>
+          }
+        />
+      {/* Pengaturan */}
+
       <Route
         path="/"
         element={
           <Layout>
             <Home />
+          </Layout>
+        }
+      />
+      <Route
+        path="/scan-barcode"
+        element={
+          <Layout>
+            <ScanBarcode />
           </Layout>
         }
       />

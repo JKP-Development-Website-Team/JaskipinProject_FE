@@ -1,6 +1,6 @@
 import { API } from "../../config/API";
-import jwt_decode from 'jwt-decode';
-import AuthHeader from "./AuthHeader";
+// import jwt_decode from 'jwt-decode';
+// import AuthHeader from "./AuthHeader";
 
 const loginFunc = (email, password) => {
     return API.post('/login', {

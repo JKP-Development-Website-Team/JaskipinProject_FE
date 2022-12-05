@@ -11,3 +11,4 @@ export {default as Tracking} from './luarNegeri/tracking/Tracking';
 export {default as DomestikTransaksi} from './Domestik/DomestikTransaksi';
 export {default as ScanBarcode} from './luarNegeri/scanBarcode/ScanBarcode';
 export {default as PengaturanHome} from './pengaturan/PengaturanHome';
+export {default as DataPengguna} from './pengaturan/masterData/DataPengguna'
