@@ -121,3 +121,21 @@ export const months = [
     "November",
     "Desember"
 ]
+
+export const HeaderMasterData = [
+    {
+        title:'Tarif'
+    },
+    {
+        title:'Mitra Expedisi'
+    },
+    {
+        title:'Data Pengguna'
+    },
+    {
+        title:'Akun Bank Pembayaran'
+    },
+    {
+        title:'Data Karyawan'
+    },
+]
