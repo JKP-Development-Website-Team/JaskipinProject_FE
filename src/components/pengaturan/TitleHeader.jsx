@@ -1,8 +1,7 @@
 import React, {useEffect, useRef, useState} from "react";
 import { Link, useLocation } from "react-router-dom";
-import { HeaderMasterData } from "../utils/Constant";
 
-const TitleHeader = ({title}) => {
+const TitleHeader = ({title, dataMenu}) => {
 
 const [isClick, setIsClick] = useState(false)
   function useHorizontalScroll() {
@@ -39,7 +38,7 @@ const [isClick, setIsClick] = useState(false)
     ref={scrollRef}
     onWheel={() => setIsClick(false)}
     >
-      {HeaderMasterData.map((item, idx) => {
+      {dataMenu.map((item, idx) => {
         return (
         <div 
         className="dropdown" 
@@ -57,7 +56,7 @@ const [isClick, setIsClick] = useState(false)
               fontSize:".9rem",
               fontWeight:"600",
               background: item.title === title ? "#5B93F9" : "#FFF",
-              color: item.title === 'Tarif' ? "#FFF" : "#828181",
+              color: item.title === title ? "#FFF" : "#828181",
               border:"none"
             }}
             onClick={() => setIsClick(true)}

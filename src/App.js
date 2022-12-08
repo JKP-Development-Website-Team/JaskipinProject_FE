@@ -16,7 +16,8 @@ import {
   DomestikTransaksi,
   ScanBarcode,
   PengaturanHome,
-  DataPengguna
+  DataPengguna,
+  TarifMasterData
 } from "./pages";
 import { useEffect } from "react";
 import ChangePassword from "./pages/auth/ChangePassword";
@@ -139,6 +140,15 @@ function App() {
           element={
             <Layout>
               <PengaturanHome />
+            </Layout>
+          }
+        />
+
+        <Route 
+          path="/pengaturan/master-data/tarif"
+          element={
+            <Layout>
+              <TarifMasterData />
             </Layout>
           }
         />
