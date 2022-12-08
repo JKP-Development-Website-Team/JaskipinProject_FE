@@ -2,6 +2,7 @@ import { Form, Button } from "react-bootstrap";
 import IconUsername from "../../Image/IconUsername.png";
 import IconPassword from "../../Image/IconPassword.png";
 import IconUnhiden from "../../Image/IconUnhiden.png"
+import {AiOutlineEye, AiOutlineEyeInvisible} from 'react-icons/ai'
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -48,7 +49,11 @@ const FormAuth = ({
           }}
           onChange={handleChange}
         />
-        <img src={IconUnhiden} alt="Unhidden" width={22} height={22} style={{marginLeft:"-40px", cursor:"pointer"}} onClick={() => setIsVisible(isVisible === "password" ? "text" : "password")}/>
+        {isVisible === 'password' ? (
+          <AiOutlineEye onClick={() => setIsVisible('text')} style={{marginLeft:"-40px", fontSize:"1.5rem", color:"#828181"}} />
+        ): (
+          <AiOutlineEyeInvisible onClick={() => setIsVisible('password')} style={{marginLeft:"-40px", fontSize:"1.5rem"}}/>
+        )}
       </Form.Group>
       <Button
         variant="primary"

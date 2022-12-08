@@ -40,8 +40,8 @@ const SidebarDua = () => {
                   className={`nav-link collapsed d-flex ${spaceClass}`}
                   data-bs-target="#components-nav"
                   data-bs-toggle="collapse"
-                  to={item.link}
                   onClick={() => {
+                    navigate(item?.link)
                     setShowContent(item.name)
                     if(showContent === item.name) setShowContent('')
                     if(animated) dispatch(animatedReducers(false))                  

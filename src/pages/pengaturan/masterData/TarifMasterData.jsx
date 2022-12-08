@@ -6,19 +6,22 @@ import { AiOutlinePlus } from "react-icons/ai";
 import TabelPengaturan from '../../../components/tabel/TabelPengaturan'
 
 
-const DataPengguna = () => {
+const TarifMasterData = () => {
   const columns = [
-    {field:"namaLengkap", header:"Nama Lengkap"},
-    {field:"email", header:"Email"},
-    {field:"noHp", header:"No. Handphone"},
-    {field:"alamat", header:"Alamat"},
-    {field:"tipePengguna", header:"Tipe Pengguna"},
+    {field:"noOrder", header:"No. Order"},
+    {field:"pengirim", header:"Pengirim"},
+    {field:"noResi", header:"No. Resi"},
+    {field:"ekspedisi", header:"Ekspedisi"},
+    {field:"penerima", header:"Penerima"},
+    {field:"ongkir", header:"Ongkir"},
+    {field:"berat", header:"Berat"},
+    {field:"tujuan", header:"Tujuan"},
     {field:"action", header:""}
   ]
 
   const colSpan = {
-    colOne: 5,
-    colTwo: 1,
+    colOne: 7,
+    colTwo: 2,
   };
 
   const actionButton = (id) => (
@@ -34,38 +37,50 @@ const DataPengguna = () => {
   const dataTable = [
     {
       id:"1",
-      namaLengkap: "JEX000000888",
-      email:"John Doe",
-      noHp:"JEX000000888",
-      alamat:"siCepat",
-      tipePengguna: "John Doe",
+      noOrder: "JEX000000888",
+      pengirim:"John Doe",
+      noResi:"JEX000000888",
+      ekspedisi:"siCepat",
+      penerima:"Johnn",
+      ongkir:"Rp 20.000",
+      berat:"1 Kg",
+      tujuan:"Indramayu",
       action:""
     },
     {
       id:"2",
-      namaLengkap: "JEX000000888",
-      email:"John Doe",
-      noHp:"JEX000000888",
-      alamat:"siCepat",
-      tipePengguna: "John Doe",
+      noOrder: "JEX000000888",
+      pengirim:"John Doe",
+      noResi:"JEX000000888",
+      ekspedisi:"siCepat",
+      penerima:"Johnn",
+      ongkir:"Rp 20.000",
+      berat:"1 Kg",
+      tujuan:"Indramayu",
       action:""
     },
     {
       id:"3",
-      namaLengkap: "JEX000000888",
-      email:"John Doe",
-      noHp:"JEX000000888",
-      alamat:"siCepat",
-      tipePengguna: "John Doe",
+      noOrder: "JEX000000888",
+      pengirim:"John Doe",
+      noResi:"JEX000000888",
+      ekspedisi:"siCepat",
+      penerima:"Johnn",
+      ongkir:"Rp 20.000",
+      berat:"1 Kg",
+      tujuan:"Indramayu",
       action:""
     },
     {
       id:"4",
-      namaLengkap: "JEX000000888",
-      email:"John Doe",
-      noHp:"JEX000000888",
-      alamat:"siCepat",
-      tipePengguna: "John Doe",
+      noOrder: "JEX000000888",
+      pengirim:"John Doe",
+      noResi:"JEX000000888",
+      ekspedisi:"siCepat",
+      penerima:"Johnn",
+      ongkir:"Rp 20.000",
+      berat:"1 Kg",
+      tujuan:"Indramayu",
       action:""
     },
   ]
@@ -83,7 +98,7 @@ const DataPengguna = () => {
             <div className="d-flex">
               <Header 
               title='Master Data'
-              titlePage='Data Pengguna'
+              titlePage='Tarif'
               />
             </div>
             <div className="d-flex flex-column mt-5">
@@ -94,7 +109,7 @@ const DataPengguna = () => {
                     fontWeight: 600,
                   }}
                 >
-                  Data Pengguna
+                  Tarif
                 </h3>
                 <Button variant="primary" className="d-flex align-items-center" 
                   style={{ backgroundColor: "#0843AD", border: "none", fontWeight: 400 }}>
@@ -116,4 +131,4 @@ const DataPengguna = () => {
   );
 };
 
-export default DataPengguna;
+export default TarifMasterData;

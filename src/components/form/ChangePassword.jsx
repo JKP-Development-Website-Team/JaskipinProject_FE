@@ -33,7 +33,7 @@ const FormChangePassword = ({
           onChange={handleChange}
         />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicUserName">
+      {/* <Form.Group className="mb-3" controlId="formBasicUserName">
         <Form.Control
           type="text"
           placeholder="Username"
@@ -85,7 +85,7 @@ const FormChangePassword = ({
           onChange={handleChange}
         />
         <img src={IconUnhiden} alt="Unhidden" width={22} height={22} style={{marginLeft:"-40px", cursor:"pointer"}} onClick={() => setIsVisible(isVisible === "password" ? "text" : "password")}/>
-      </Form.Group>
+      </Form.Group> */}
       <Button
         variant="primary"
         type="submit"
