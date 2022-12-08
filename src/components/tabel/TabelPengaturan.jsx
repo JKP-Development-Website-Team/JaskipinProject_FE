@@ -46,7 +46,7 @@ function TabelPengaturan({
               return (
                 <td
                 key={idx}
-                 className={col.fieldAction && `d-flex fw-bold justify-content-between align-items-center`}
+                 className={row[col.field] === "" && `d-flex fw-bold justify-content-center align-items-center`}
                 >{row[col.field] === "" ? actionButton(row.id): row[col.field]}
                 </td>
               )

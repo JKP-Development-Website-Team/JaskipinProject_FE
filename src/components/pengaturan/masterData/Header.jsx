@@ -1,7 +1,9 @@
 import React from "react";
-import TitleHeader from "./TitleHeader";
+import TitleHeader from "../TitleHeader";
+import { HeaderMasterData } from "../../utils/Constant";
 
-const Header = ({title}) => {
+
+const Header = ({title, titlePage}) => {
   return (
     <div>
       <div
@@ -21,7 +23,8 @@ const Header = ({title}) => {
             </h1>
             <div className="d-flex">
               <TitleHeader  
-              title='Tarif'
+              title={titlePage}
+              dataMenu={HeaderMasterData}
               />
             </div>
           </div>
