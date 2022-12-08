@@ -13,3 +13,5 @@ export {default as ScanBarcode} from './luarNegeri/scanBarcode/ScanBarcode';
 export {default as PengaturanHome} from './pengaturan/PengaturanHome';
 export {default as DataPengguna} from './pengaturan/masterData/DataPengguna'
 export {default as TarifMasterData} from './pengaturan/masterData/TarifMasterData';
+export {default as KantorCabang} from './pengaturan/officeParameter/MainPage'
+export {default as PengaturanSystemMain} from './pengaturan/pengaturanSystem/PengaturanSystemMain'

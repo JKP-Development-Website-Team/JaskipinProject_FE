@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const TitleHeader = ({title, dataMenu}) => {
 
@@ -31,7 +31,7 @@ const [isClick, setIsClick] = useState(false)
     className="d-flex align-items-center gap-3" 
     style={{
       overflow: isClick ? "" :"auto",
-      width:"70%",
+      width: dataMenu.length <= 6 ? "100%" : "70%",
       paddingBottom:"15px",
       position:"relative",
     }}
@@ -63,22 +63,24 @@ const [isClick, setIsClick] = useState(false)
           >
             {item.title.slice(0, 15)} {item.title.length >= 15 && '...'}
           </button>
-          <ul className="dropdown-menu" style={{
-            paddingRight:"8.5px",
-            borderTopRightRadius:"0",
-            borderTopLeftRadius:"0",
-            marginTop:"-13px",
-            background:"#5B93F9",
-            border:"none"
-          }}>
-            {item?.children?.map((item, idx) => (
-            <li key={idx}>
-              <Link className="dropdown-item" to={item.chilLink} style={{color:"#FFF", fontWeight:"600"}}>
-                {item.nameChil}
-              </Link>
-            </li>
-            ))}
-          </ul>
+          {item.children ? (
+            <ul className="dropdown-menu" style={{
+              width:'175px',
+              borderTopRightRadius:"0",
+              borderTopLeftRadius:"0",
+              marginTop:"-13px",
+              background:"#5B93F9",
+              border:"none"
+            }}>
+                {item?.children?.map((item, idx) => (
+                <li key={idx}>
+                  <Link className="dropdown-item" to={item.chilLink} style={{color:"#FFF", fontWeight:"600"}}>
+                    {item.nameChil}
+                  </Link>
+                </li>
+                ))}
+            </ul>
+          ) : null}
         </div>
         )
         
