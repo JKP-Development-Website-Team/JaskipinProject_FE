@@ -162,3 +162,56 @@ export const HeaderMasterData = [
         title:'Akun Bank Pembayaran'
     },
 ]
+
+export const HeaderOfficeParameter = [
+    {
+        title:'Kantor Cabang',
+    },
+    {
+        title:'Kemitraan',
+        children: [
+            {
+                nameChil:'Daftar Agen',
+                chilLink:'/pengaturan/master-data/tarif/tarif-umum'
+            },
+            {
+                nameChil:'Daftar VIP Customer',
+                chilLink:'/pengaturan/master-data/tarif/tarif-agen'
+            },
+            {
+                nameChil:'Daftar Affiliate',
+                chilLink:'/pengaturan/master-data/tarif/tarif-vip-customer'
+            },
+            {
+                nameChil:'Daftar Drop Point',
+                chilLink:'/pengaturan/master-data/tarif/tarif-vip-customer'
+            },
+        ]
+    }
+]
+export const HeaderPengaturanSystems = [
+    {
+        title:'Kantor Cabang',
+    },
+    {
+        title:'Kantor Cabang',
+    },
+    {
+        title:'Kantor Cabang',
+    },
+    {
+        title:'Kantor Cabang',
+    },
+    {
+        title:'Kantor Cabang',
+    },
+    {
+        title:'Kantor Cabang',
+    },
+    {
+        title:'Kantor Cabang',
+    },
+    {
+        title:'Kantor Cabang',
+    },
+]

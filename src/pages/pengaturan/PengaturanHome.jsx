@@ -15,12 +15,12 @@ const PengaturanHome = () => {
     {
       name: "Office Parameter",
       image: imgOfficeParameter,
-      link: "/pengaturan/office-parameter",
+      link: "/pengaturan/office-parameter/kantor-cabang",
     },
     {
       name: "Pengaturan Sistem",
       image: imgPengaturanSistem,
-      link: "/pengaturan/pengaturan-sistem",
+      link: "/pengaturan/pengaturan-system/pengaturan-system-main",
     },
   ];
 

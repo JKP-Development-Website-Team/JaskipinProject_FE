@@ -46,7 +46,7 @@ function TabelPengaturan({
               return (
                 <td
                 key={idx}
-                 className={row[col.field] === "" && `d-flex fw-bold justify-content-center align-items-center`}
+                 className={row[col.field] === "" && `d-flex fw-bold justify-content-end align-items-center`}
                 >{row[col.field] === "" ? actionButton(row.id): row[col.field]}
                 </td>
               )
@@ -68,6 +68,7 @@ function TabelPengaturan({
             <div
               style={{
                 display: "flex",
+                justifyContent:"end",
                 gap: "15px",
                 marginLeft: "-30px",
               }}

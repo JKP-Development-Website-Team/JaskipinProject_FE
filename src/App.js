@@ -17,7 +17,9 @@ import {
   ScanBarcode,
   PengaturanHome,
   DataPengguna,
-  TarifMasterData
+  TarifMasterData,
+  KantorCabang,
+  PengaturanSystemMain
 } from "./pages";
 import { useEffect } from "react";
 import ChangePassword from "./pages/auth/ChangePassword";
@@ -158,6 +160,25 @@ function App() {
           element={
             <Layout>
               <DataPengguna />
+            </Layout>
+          }
+        />
+
+
+        <Route 
+          path="/pengaturan/office-parameter/kantor-cabang"
+          element={
+            <Layout>
+              <KantorCabang />
+            </Layout>
+          }
+        />
+
+        <Route 
+          path="/pengaturan/pengaturan-system/pengaturan-system-main"
+          element={
+            <Layout>
+              <PengaturanSystemMain />
             </Layout>
           }
         />
