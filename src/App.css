@@ -323,6 +323,14 @@ box-shadow:
 
 /* Scan Barcode table  */
 
-/* Button Detail */
+/* Menu Pengaturan */
+.dropdown-item:hover {
+  background: transparent !important;
+  color: #0843AD !important
+}
 
-/* AKhir Button Detail */
+#mainHeader::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Akhir Menu Pengaturan */

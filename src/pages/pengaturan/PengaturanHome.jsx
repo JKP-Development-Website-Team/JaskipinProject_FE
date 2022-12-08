@@ -10,7 +10,7 @@ const PengaturanHome = () => {
     {
       name: "Master Data",
       image: imgMasterData,
-      link: "/pengaturan/master-data",
+      link: "/pengaturan/master-data/data-pengguna",
     },
     {
       name: "Office Parameter",

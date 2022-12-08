@@ -124,7 +124,21 @@ export const months = [
 
 export const HeaderMasterData = [
     {
-        title:'Tarif'
+        title:'Tarif',
+        children: [
+            {
+                nameChil:'Tarif Umum',
+                chilLink:'/pengaturan/master-data/tarif/tarif-umum'
+            },
+            {
+                nameChil:'Tarif Agen',
+                chilLink:'/pengaturan/master-data/tarif/tarif-agen'
+            },
+            {
+                nameChil:'Tarif VIP Customer',
+                chilLink:'/pengaturan/master-data/tarif/tarif-vip-customer'
+            },
+        ]
     },
     {
         title:'Mitra Expedisi'
@@ -136,6 +150,15 @@ export const HeaderMasterData = [
         title:'Akun Bank Pembayaran'
     },
     {
-        title:'Data Karyawan'
+        title:'Data Pengguna'
+    },
+    {
+        title:'Akun Bank Pembayaran'
+    },
+    {
+        title:'Data Pengguna'
+    },
+    {
+        title:'Akun Bank Pembayaran'
     },
 ]
