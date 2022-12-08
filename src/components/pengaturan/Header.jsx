@@ -1,7 +1,7 @@
 import React from "react";
 import TitleHeader from "./TitleHeader";
 
-const Header = () => {
+const Header = ({title}) => {
   return (
     <div>
       <div
@@ -17,10 +17,12 @@ const Header = () => {
                 fontWeight: 600,
               }}
             >
-              Master Data
+             {title}
             </h1>
             <div className="d-flex">
-              <TitleHeader />
+              <TitleHeader  
+              title='Tarif'
+              />
             </div>
           </div>
         </div>
